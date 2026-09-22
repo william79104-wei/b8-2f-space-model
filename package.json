@@ -1,0 +1,26 @@
+{
+  "name": "b8-2f-model-review",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --configLoader native --host 127.0.0.1 --port 5173 --strictPort",
+    "start": "node serve.mjs",
+    "build": "tsc --noEmit && vite build --configLoader native",
+    "test": "node --test src/model.test.ts"
+  },
+  "dependencies": {
+    "@react-three/fiber": "^9.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "three": "^0.180.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@types/three": "^0.180.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.0",
+    "vite": "^7.0.0"
+  }
+}

@@ -1,0 +1,2150 @@
+{
+  "units": "cm",
+  "coordinateSystem": "X 右、Y 圖上、Z 向上；一般地坪 FL0",
+  "source": "PL-01 + 規格v1.0 + 本次樓高修改",
+  "settings": {
+    "height": 340,
+    "kitchenDrop": 45,
+    "halfWallTop": 90,
+    "secondarySill": 120,
+    "deskHeight": 74,
+    "deskLength": 180,
+    "deskDepth": 60
+  },
+  "parts": [
+    {
+      "id": "floor-living",
+      "name": "客廳地坪",
+      "kind": "floor",
+      "room": "living",
+      "min": [
+        275,
+        0,
+        -12
+      ],
+      "max": [
+        587.5,
+        451.4,
+        0
+      ],
+      "color": "#d5cec1",
+      "status": "drawing",
+      "source": "PL-01 尺寸鏈；地坪厚度 12 僅作展示，不屬施工資料",
+      "wall": false
+    },
+    {
+      "id": "floor-kitchen",
+      "name": "餐廚地坪",
+      "kind": "floor",
+      "room": "kitchen",
+      "min": [
+        275,
+        451.4,
+        -12
+      ],
+      "max": [
+        587.5,
+        755,
+        0
+      ],
+      "color": "#d9d3c9",
+      "status": "drawing",
+      "source": "PL-01 尺寸鏈；地坪厚度 12 僅作展示，不屬施工資料",
+      "wall": false
+    },
+    {
+      "id": "floor-master",
+      "name": "主臥地坪",
+      "kind": "floor",
+      "room": "master",
+      "min": [
+        596.5,
+        460.4,
+        -12
+      ],
+      "max": [
+        865,
+        755,
+        0
+      ],
+      "color": "#d9d0c0",
+      "status": "drawing",
+      "source": "PL-01 尺寸鏈；地坪厚度 12 僅作展示，不屬施工資料",
+      "wall": false
+    },
+    {
+      "id": "floor-closet",
+      "name": "更衣室地坪",
+      "kind": "floor",
+      "room": "closet",
+      "min": [
+        596.5,
+        320.4,
+        -12
+      ],
+      "max": [
+        865,
+        451.4,
+        0
+      ],
+      "color": "#d4cbbb",
+      "status": "drawing",
+      "source": "PL-01 尺寸鏈；地坪厚度 12 僅作展示，不屬施工資料",
+      "wall": false
+    },
+    {
+      "id": "floor-mainbath",
+      "name": "主衛浴地坪",
+      "kind": "floor",
+      "room": "mainbath",
+      "min": [
+        598,
+        160.4,
+        -12
+      ],
+      "max": [
+        865,
+        310,
+        0
+      ],
+      "color": "#b8c6c5",
+      "status": "drawing",
+      "source": "PL-01 尺寸鏈；地坪厚度 12 僅作展示，不屬施工資料",
+      "wall": false
+    },
+    {
+      "id": "floor-bath",
+      "name": "次衛浴地坪",
+      "kind": "floor",
+      "room": "bath",
+      "min": [
+        598,
+        0,
+        -12
+      ],
+      "max": [
+        865,
+        150,
+        0
+      ],
+      "color": "#bdccca",
+      "status": "drawing",
+      "source": "PL-01 尺寸鏈；地坪厚度 12 僅作展示，不屬施工資料",
+      "wall": false
+    },
+    {
+      "id": "floor-tatami",
+      "name": "次臥地坪",
+      "kind": "floor",
+      "room": "tatami",
+      "min": [
+        0,
+        0,
+        -12
+      ],
+      "max": [
+        266,
+        308,
+        0
+      ],
+      "color": "#d9d0c1",
+      "status": "drawing",
+      "source": "PL-01 尺寸鏈；地坪厚度 12 僅作展示，不屬施工資料",
+      "wall": false
+    },
+    {
+      "id": "floor-balcony",
+      "name": "工作陽台地坪",
+      "kind": "floor",
+      "room": "balcony",
+      "min": [
+        0,
+        323,
+        -12
+      ],
+      "max": [
+        260,
+        480.5,
+        0
+      ],
+      "color": "#cbd0c8",
+      "status": "drawing",
+      "source": "PL-01 尺寸鏈；地坪厚度 12 僅作展示，不屬施工資料",
+      "wall": false
+    },
+    {
+      "id": "floor-terrace",
+      "name": "露台地坪",
+      "kind": "floor",
+      "room": "terrace",
+      "min": [
+        0,
+        480.5,
+        -12
+      ],
+      "max": [
+        260,
+        755,
+        0
+      ],
+      "color": "#c3ccc5",
+      "status": "drawing",
+      "source": "PL-01 尺寸鏈；地坪厚度 12 僅作展示，不屬施工資料",
+      "wall": false
+    },
+    {
+      "id": "entry-floor",
+      "name": "玄關分區",
+      "kind": "floor",
+      "room": "living",
+      "min": [
+        467.5,
+        0,
+        0
+      ],
+      "max": [
+        577.5,
+        145,
+        0.4
+      ],
+      "color": "#e4e0d7",
+      "status": "drawing",
+      "source": "PL-01 玄關位置；上緣分界暫示意",
+      "wall": false
+    },
+    {
+      "id": "outer-left",
+      "name": "左外牆",
+      "kind": "wall",
+      "room": "outer",
+      "min": [
+        -15,
+        0,
+        0
+      ],
+      "max": [
+        0,
+        755,
+        340
+      ],
+      "color": "#e5e1d8",
+      "status": "proposed",
+      "source": "未標外牆厚；15 cm 展示占位",
+      "note": "一般牆頂暫採樓高；未扣樓板與非廚房天花厚度",
+      "wall": true
+    },
+    {
+      "id": "outer-right",
+      "name": "右外牆",
+      "kind": "wall",
+      "room": "outer",
+      "min": [
+        865,
+        0,
+        0
+      ],
+      "max": [
+        880,
+        755,
+        340
+      ],
+      "color": "#e5e1d8",
+      "status": "proposed",
+      "source": "未標外牆厚；15 cm 展示占位",
+      "note": "一般牆頂暫採樓高；未扣樓板與非廚房天花厚度",
+      "wall": true
+    },
+    {
+      "id": "outer-bottom-a",
+      "name": "下外牆",
+      "kind": "wall",
+      "room": "outer",
+      "min": [
+        -15,
+        -15,
+        0
+      ],
+      "max": [
+        467.5,
+        0,
+        340
+      ],
+      "color": "#e5e1d8",
+      "status": "proposed",
+      "source": "PL-01 入口左側；厚度暫 15",
+      "note": "一般牆頂暫採樓高；未扣樓板與非廚房天花厚度",
+      "wall": true
+    },
+    {
+      "id": "outer-bottom-b",
+      "name": "入口右側外牆",
+      "kind": "wall",
+      "room": "outer",
+      "min": [
+        577.5,
+        -15,
+        0
+      ],
+      "max": [
+        880,
+        0,
+        340
+      ],
+      "color": "#e5e1d8",
+      "status": "proposed",
+      "source": "PL-01 入口右側；厚度暫 15",
+      "note": "一般牆頂暫採樓高；未扣樓板與非廚房天花厚度",
+      "wall": true
+    },
+    {
+      "id": "terrace-rail",
+      "name": "露台邊界（高度待定）",
+      "kind": "railing",
+      "room": "terrace",
+      "min": [
+        0,
+        755,
+        0
+      ],
+      "max": [
+        260,
+        764,
+        110
+      ],
+      "color": "#9ca9a5",
+      "status": "proposed",
+      "source": "PL-01 戶外邊界；高度 110 暫示意",
+      "opacity": 0.4,
+      "wall": false
+    },
+    {
+      "id": "kitchen-exterior-a",
+      "name": "餐廚窗側實牆",
+      "kind": "wall",
+      "room": "kitchen",
+      "min": [
+        260,
+        755,
+        0
+      ],
+      "max": [
+        360,
+        770,
+        340
+      ],
+      "color": "#e5e1d8",
+      "status": "proposed",
+      "source": "PL-01；端點未標之局部尺寸依位置描繪，待複核",
+      "note": "一般牆頂暫採樓高；未扣樓板與非廚房天花厚度",
+      "wall": true
+    },
+    {
+      "id": "kitchen-sill",
+      "name": "廚房窗下牆 · 40 cm",
+      "kind": "wall",
+      "room": "kitchen",
+      "min": [
+        360,
+        755,
+        0
+      ],
+      "max": [
+        578,
+        770,
+        40
+      ],
+      "color": "#e5e1d8",
+      "status": "confirmed",
+      "source": "使用者：廚房窗台離地 40；水平開口範圍暫依原圖",
+      "note": "一般牆頂暫採樓高；未扣樓板與非廚房天花厚度",
+      "wall": true
+    },
+    {
+      "id": "kitchen-exterior-b",
+      "name": "餐廚窗右端",
+      "kind": "wall",
+      "room": "kitchen",
+      "min": [
+        578,
+        755,
+        0
+      ],
+      "max": [
+        596.5,
+        770,
+        340
+      ],
+      "color": "#e5e1d8",
+      "status": "proposed",
+      "source": "PL-01；端點未標之局部尺寸依位置描繪，待複核",
+      "note": "一般牆頂暫採樓高；未扣樓板與非廚房天花厚度",
+      "wall": true
+    },
+    {
+      "id": "master-sill",
+      "name": "主臥窗下牆 · 40 cm",
+      "kind": "wall",
+      "room": "master",
+      "min": [
+        596.5,
+        755,
+        0
+      ],
+      "max": [
+        865,
+        770,
+        40
+      ],
+      "color": "#e5e1d8",
+      "status": "confirmed",
+      "source": "使用者：主臥窗台離地 40；窗寬依圖面範圍展示",
+      "note": "一般牆頂暫採樓高；未扣樓板與非廚房天花厚度",
+      "wall": true
+    },
+    {
+      "id": "kitchen-window",
+      "name": "廚房外窗",
+      "kind": "glass",
+      "room": "kitchen",
+      "min": [
+        360,
+        761,
+        40
+      ],
+      "max": [
+        578,
+        763,
+        240
+      ],
+      "color": "#85b9b5",
+      "status": "proposed",
+      "source": "窗台 40 已確認；窗頂與開口寬待確認",
+      "note": "玻璃厚度／框型暫示意",
+      "opacity": 0.28,
+      "wall": false
+    },
+    {
+      "id": "master-window",
+      "name": "主臥外窗",
+      "kind": "glass",
+      "room": "master",
+      "min": [
+        596.5,
+        761,
+        40
+      ],
+      "max": [
+        865,
+        763,
+        240
+      ],
+      "color": "#85b9b5",
+      "status": "proposed",
+      "source": "窗台 40 已確認；窗頂與開口寬待確認",
+      "note": "玻璃厚度／框型暫示意",
+      "opacity": 0.28,
+      "wall": false
+    },
+    {
+      "id": "kitchen-window-head",
+      "name": "廚房窗上牆",
+      "kind": "wall",
+      "room": "kitchen",
+      "min": [
+        360,
+        755,
+        240
+      ],
+      "max": [
+        578,
+        770,
+        340
+      ],
+      "color": "#e5e1d8",
+      "status": "proposed",
+      "source": "PL-01；端點未標之局部尺寸依位置描繪，待複核",
+      "note": "一般牆頂暫採樓高；未扣樓板與非廚房天花厚度",
+      "wall": true
+    },
+    {
+      "id": "master-window-head",
+      "name": "主臥窗上牆",
+      "kind": "wall",
+      "room": "master",
+      "min": [
+        596.5,
+        755,
+        240
+      ],
+      "max": [
+        865,
+        770,
+        340
+      ],
+      "color": "#e5e1d8",
+      "status": "proposed",
+      "source": "PL-01；端點未標之局部尺寸依位置描繪，待複核",
+      "note": "一般牆頂暫採樓高；未扣樓板與非廚房天花厚度",
+      "wall": true
+    },
+    {
+      "id": "kitchen-west",
+      "name": "廚房西側實牆",
+      "kind": "wall",
+      "room": "kitchen",
+      "min": [
+        260,
+        460.4,
+        0
+      ],
+      "max": [
+        275,
+        755,
+        340
+      ],
+      "color": "#e5e1d8",
+      "status": "drawing",
+      "source": "PL-01；端點未標之局部尺寸依位置描繪，待複核",
+      "note": "一般牆頂暫採樓高；未扣樓板與非廚房天花厚度",
+      "wall": true
+    },
+    {
+      "id": "balcony-door-jamb",
+      "name": "工作陽台門側",
+      "kind": "wall",
+      "room": "balcony",
+      "min": [
+        260,
+        323,
+        0
+      ],
+      "max": [
+        275,
+        373,
+        340
+      ],
+      "color": "#e5e1d8",
+      "status": "proposed",
+      "source": "PL-01；端點未標之局部尺寸依位置描繪，待複核",
+      "note": "一般牆頂暫採樓高；未扣樓板與非廚房天花厚度",
+      "wall": true
+    },
+    {
+      "id": "balcony-door-head",
+      "name": "工作陽台門上牆",
+      "kind": "wall",
+      "room": "balcony",
+      "min": [
+        260,
+        373,
+        210
+      ],
+      "max": [
+        275,
+        460.4,
+        340
+      ],
+      "color": "#e5e1d8",
+      "status": "proposed",
+      "source": "PL-01；端點未標之局部尺寸依位置描繪，待複核",
+      "note": "一般牆頂暫採樓高；未扣樓板與非廚房天花厚度",
+      "wall": true
+    },
+    {
+      "id": "tatami-north-left",
+      "name": "次臥窗左側",
+      "kind": "wall",
+      "room": "tatami",
+      "min": [
+        0,
+        308,
+        0
+      ],
+      "max": [
+        60,
+        323,
+        340
+      ],
+      "color": "#e5e1d8",
+      "status": "drawing",
+      "source": "PL-01；端點未標之局部尺寸依位置描繪，待複核",
+      "note": "一般牆頂暫採樓高；未扣樓板與非廚房天花厚度",
+      "wall": true
+    },
+    {
+      "id": "tatami-north-right",
+      "name": "次臥窗右側",
+      "kind": "wall",
+      "room": "tatami",
+      "min": [
+        176,
+        308,
+        0
+      ],
+      "max": [
+        266,
+        323,
+        340
+      ],
+      "color": "#e5e1d8",
+      "status": "drawing",
+      "source": "PL-01；端點未標之局部尺寸依位置描繪，待複核",
+      "note": "一般牆頂暫採樓高；未扣樓板與非廚房天花厚度",
+      "wall": true
+    },
+    {
+      "id": "tatami-sill",
+      "name": "次臥窗下牆 · 基準待確認",
+      "kind": "wall",
+      "room": "tatami",
+      "min": [
+        60,
+        308,
+        0
+      ],
+      "max": [
+        176,
+        323,
+        120
+      ],
+      "color": "#e5e1d8",
+      "status": "proposed",
+      "source": "120 cm 已確認；模型暫從一般地坪量起",
+      "note": "一般牆頂暫採樓高；未扣樓板與非廚房天花厚度",
+      "wall": true
+    },
+    {
+      "id": "tatami-window",
+      "name": "次臥外窗",
+      "kind": "glass",
+      "room": "tatami",
+      "min": [
+        60,
+        314,
+        120
+      ],
+      "max": [
+        176,
+        316,
+        240
+      ],
+      "color": "#85b9b5",
+      "status": "proposed",
+      "source": "窗台量測面與窗頂待確認",
+      "note": "玻璃厚度／框型暫示意",
+      "opacity": 0.28,
+      "wall": false
+    },
+    {
+      "id": "tatami-window-head",
+      "name": "次臥窗上牆",
+      "kind": "wall",
+      "room": "tatami",
+      "min": [
+        60,
+        308,
+        240
+      ],
+      "max": [
+        176,
+        323,
+        340
+      ],
+      "color": "#e5e1d8",
+      "status": "proposed",
+      "source": "PL-01；端點未標之局部尺寸依位置描繪，待複核",
+      "note": "一般牆頂暫採樓高；未扣樓板與非廚房天花厚度",
+      "wall": true
+    },
+    {
+      "id": "tatami-halfwall",
+      "name": "和室／客廳半牆",
+      "kind": "halfwall",
+      "room": "tatami",
+      "min": [
+        266,
+        128,
+        0
+      ],
+      "max": [
+        275,
+        308,
+        90
+      ],
+      "color": "#859b90",
+      "status": "confirmed",
+      "source": "使用者：90 cm、沙發背後整段上方完全開放",
+      "note": "90 數值已確認；FL±0 基準暫採。南端 128 為桌長配套展示值",
+      "wall": false
+    },
+    {
+      "id": "tatami-door-bottom",
+      "name": "次臥門下端牆",
+      "kind": "wall",
+      "room": "tatami",
+      "min": [
+        266,
+        0,
+        0
+      ],
+      "max": [
+        275,
+        42,
+        340
+      ],
+      "color": "#e5e1d8",
+      "status": "proposed",
+      "source": "PL-01；端點未標之局部尺寸依位置描繪，待複核",
+      "note": "一般牆頂暫採樓高；未扣樓板與非廚房天花厚度",
+      "wall": true
+    },
+    {
+      "id": "master-halfwall",
+      "name": "主臥／餐廚半牆",
+      "kind": "halfwall",
+      "room": "master",
+      "min": [
+        587.5,
+        550,
+        0
+      ],
+      "max": [
+        596.5,
+        755,
+        90
+      ],
+      "color": "#859b90",
+      "status": "confirmed",
+      "source": "使用者：90 cm 實牆＋玻璃；左面與更衣室及衛浴共線",
+      "note": "半牆南端與門洞端點暫依原圖示意",
+      "wall": false
+    },
+    {
+      "id": "master-partition-glass",
+      "name": "主臥半牆上方玻璃",
+      "kind": "glass",
+      "room": "master",
+      "min": [
+        591,
+        550,
+        90
+      ],
+      "max": [
+        593,
+        755,
+        295
+      ],
+      "color": "#85b9b5",
+      "status": "proposed",
+      "source": "使用者：玻璃沿同一半牆；頂端暫接廚房天花",
+      "note": "玻璃厚度／框型暫示意",
+      "opacity": 0.28,
+      "wall": false
+    },
+    {
+      "id": "master-door-head",
+      "name": "主臥門上牆",
+      "kind": "wall",
+      "room": "master",
+      "min": [
+        587.5,
+        460.4,
+        210
+      ],
+      "max": [
+        596.5,
+        550,
+        295
+      ],
+      "color": "#e5e1d8",
+      "status": "proposed",
+      "source": "PL-01；端點未標之局部尺寸依位置描繪，待複核",
+      "note": "一般牆頂暫採樓高；未扣樓板與非廚房天花厚度",
+      "wall": true
+    },
+    {
+      "id": "closet-west-a",
+      "name": "更衣室左側牆（門洞下段）",
+      "kind": "wall",
+      "room": "closet",
+      "min": [
+        587.5,
+        320.4,
+        0
+      ],
+      "max": [
+        596.5,
+        340,
+        340
+      ],
+      "color": "#e5e1d8",
+      "status": "drawing",
+      "source": "PL-01；端點未標之局部尺寸依位置描繪，待複核",
+      "note": "一般牆頂暫採樓高；未扣樓板與非廚房天花厚度",
+      "wall": true
+    },
+    {
+      "id": "closet-west-b",
+      "name": "更衣室左側牆（門洞上段）",
+      "kind": "wall",
+      "room": "closet",
+      "min": [
+        587.5,
+        430,
+        0
+      ],
+      "max": [
+        596.5,
+        451.4,
+        340
+      ],
+      "color": "#e5e1d8",
+      "status": "drawing",
+      "source": "PL-01；端點未標之局部尺寸依位置描繪，待複核",
+      "note": "一般牆頂暫採樓高；未扣樓板與非廚房天花厚度",
+      "wall": true
+    },
+    {
+      "id": "closet-entry-door",
+      "name": "客廳至更衣室預留門洞",
+      "kind": "door",
+      "room": "closet",
+      "min": [
+        587.5,
+        340,
+        0
+      ],
+      "max": [
+        596.5,
+        430,
+        210
+      ],
+      "color": "#a28f72",
+      "status": "proposed",
+      "source": "使用者要求：更衣室左側預留可由客廳進入的門；門寬與開向待確認",
+      "wall": false
+    },
+    {
+      "id": "closet-parking-pocket",
+      "name": "牆內收門盒（3+0連動概念）",
+      "kind": "pocket",
+      "room": "closet",
+      "min": [
+        596.5,
+        431.4,
+        0
+      ],
+      "max": [
+        674.625,
+        451.4,
+        295
+      ],
+      "color": "#b99763",
+      "status": "proposed",
+      "source": "影片參考：3+0同步連動拉門，門片往右端牆內收；本案以312.5 cm開口暫按4扇示意",
+      "note": "牆盒完成厚度、內部軌道、檢修方式與結構補強待廠商；20 cm為模型占位，不是施工尺寸",
+      "opacity": 0.24,
+      "wall": false
+    },
+    {
+      "id": "mainbath-west",
+      "name": "主衛浴左側牆",
+      "kind": "wall",
+      "room": "mainbath",
+      "min": [
+        587.5,
+        150,
+        0
+      ],
+      "max": [
+        598,
+        320.4,
+        340
+      ],
+      "color": "#e5e1d8",
+      "status": "drawing",
+      "source": "PL-01；端點未標之局部尺寸依位置描繪，待複核",
+      "note": "一般牆頂暫採樓高；未扣樓板與非廚房天花厚度",
+      "wall": true
+    },
+    {
+      "id": "bath-west-a",
+      "name": "次衛浴門左側牆下段",
+      "kind": "wall",
+      "room": "bath",
+      "min": [
+        587.5,
+        0,
+        0
+      ],
+      "max": [
+        598,
+        65,
+        340
+      ],
+      "color": "#e5e1d8",
+      "status": "proposed",
+      "source": "PL-01；端點未標之局部尺寸依位置描繪，待複核",
+      "note": "一般牆頂暫採樓高；未扣樓板與非廚房天花厚度",
+      "wall": true
+    },
+    {
+      "id": "bath-west-head",
+      "name": "次衛浴門上牆",
+      "kind": "wall",
+      "room": "bath",
+      "min": [
+        587.5,
+        65,
+        210
+      ],
+      "max": [
+        598,
+        150,
+        340
+      ],
+      "color": "#e5e1d8",
+      "status": "proposed",
+      "source": "PL-01；端點未標之局部尺寸依位置描繪，待複核",
+      "note": "一般牆頂暫採樓高；未扣樓板與非廚房天花厚度",
+      "wall": true
+    },
+    {
+      "id": "master-closet-a",
+      "name": "主臥／更衣室隔牆左段",
+      "kind": "wall",
+      "room": "closet",
+      "min": [
+        596.5,
+        451.4,
+        0
+      ],
+      "max": [
+        650,
+        460.4,
+        340
+      ],
+      "color": "#e5e1d8",
+      "status": "drawing",
+      "source": "PL-01；端點未標之局部尺寸依位置描繪，待複核",
+      "note": "一般牆頂暫採樓高；未扣樓板與非廚房天花厚度",
+      "wall": true
+    },
+    {
+      "id": "master-closet-b",
+      "name": "主臥／更衣室隔牆右段",
+      "kind": "wall",
+      "room": "closet",
+      "min": [
+        750,
+        451.4,
+        0
+      ],
+      "max": [
+        865,
+        460.4,
+        340
+      ],
+      "color": "#e5e1d8",
+      "status": "drawing",
+      "source": "PL-01；端點未標之局部尺寸依位置描繪，待複核",
+      "note": "一般牆頂暫採樓高；未扣樓板與非廚房天花厚度",
+      "wall": true
+    },
+    {
+      "id": "master-closet-head",
+      "name": "更衣室門上牆",
+      "kind": "wall",
+      "room": "closet",
+      "min": [
+        650,
+        451.4,
+        210
+      ],
+      "max": [
+        750,
+        460.4,
+        340
+      ],
+      "color": "#e5e1d8",
+      "status": "proposed",
+      "source": "PL-01；端點未標之局部尺寸依位置描繪，待複核",
+      "note": "一般牆頂暫採樓高；未扣樓板與非廚房天花厚度",
+      "wall": true
+    },
+    {
+      "id": "closet-bath-a",
+      "name": "更衣室／主衛浴隔牆左段",
+      "kind": "wall",
+      "room": "mainbath",
+      "min": [
+        598,
+        310,
+        0
+      ],
+      "max": [
+        680,
+        320.4,
+        340
+      ],
+      "color": "#e5e1d8",
+      "status": "drawing",
+      "source": "PL-01；端點未標之局部尺寸依位置描繪，待複核",
+      "note": "一般牆頂暫採樓高；未扣樓板與非廚房天花厚度",
+      "wall": true
+    },
+    {
+      "id": "closet-bath-b",
+      "name": "更衣室／主衛浴隔牆右段",
+      "kind": "wall",
+      "room": "mainbath",
+      "min": [
+        770,
+        310,
+        0
+      ],
+      "max": [
+        865,
+        320.4,
+        340
+      ],
+      "color": "#e5e1d8",
+      "status": "drawing",
+      "source": "PL-01；端點未標之局部尺寸依位置描繪，待複核",
+      "note": "一般牆頂暫採樓高；未扣樓板與非廚房天花厚度",
+      "wall": true
+    },
+    {
+      "id": "closet-bath-head",
+      "name": "主衛浴門上牆",
+      "kind": "wall",
+      "room": "mainbath",
+      "min": [
+        680,
+        310,
+        210
+      ],
+      "max": [
+        770,
+        320.4,
+        340
+      ],
+      "color": "#e5e1d8",
+      "status": "proposed",
+      "source": "PL-01；端點未標之局部尺寸依位置描繪，待複核",
+      "note": "一般牆頂暫採樓高；未扣樓板與非廚房天花厚度",
+      "wall": true
+    },
+    {
+      "id": "bath-divider",
+      "name": "主次衛浴隔牆",
+      "kind": "wall",
+      "room": "bath",
+      "min": [
+        598,
+        150,
+        0
+      ],
+      "max": [
+        865,
+        160.4,
+        340
+      ],
+      "color": "#e5e1d8",
+      "status": "drawing",
+      "source": "PL-01；端點未標之局部尺寸依位置描繪，待複核",
+      "note": "一般牆頂暫採樓高；未扣樓板與非廚房天花厚度",
+      "wall": true
+    },
+    {
+      "id": "kitchen-ceiling",
+      "name": "廚房設備預留層",
+      "kind": "ceiling",
+      "room": "kitchen",
+      "min": [
+        275,
+        451.4,
+        295
+      ],
+      "max": [
+        587.5,
+        755,
+        340
+      ],
+      "color": "#b4bcb2",
+      "status": "proposed",
+      "source": "本次：樓高 340；廚房吊隱冷氣＋除濕。暫預留 45 cm",
+      "note": "覆蓋餐廚區域僅為預留範圍；設備、檢修及管線未定",
+      "opacity": 0.22,
+      "wall": false
+    },
+    {
+      "id": "tatami-platform",
+      "name": "和室架高平台 · FL+45",
+      "kind": "platform",
+      "room": "tatami",
+      "min": [
+        0,
+        128,
+        0
+      ],
+      "max": [
+        206,
+        308,
+        45
+      ],
+      "color": "#b9aa90",
+      "status": "confirmed",
+      "source": "PL-01 FL+45；整體和室；平面範圍與收納待確認",
+      "note": "高度 45 已定；平台平面深度隨桌深連動，為草模示意",
+      "wall": false
+    },
+    {
+      "id": "tatami-desk",
+      "name": "半牆旁長桌",
+      "kind": "desk",
+      "room": "tatami",
+      "min": [
+        206,
+        128,
+        70
+      ],
+      "max": [
+        266,
+        308,
+        74
+      ],
+      "color": "#b99972",
+      "status": "proposed",
+      "source": "歷史建議 180 × 60 × H74；桌板厚暫 4",
+      "note": "桌下整段開放；懸挑結構待設計。落腳面暫為 FL0",
+      "wall": false
+    },
+    {
+      "id": "sofa-base",
+      "name": "客廳沙發",
+      "kind": "furniture",
+      "room": "living",
+      "min": [
+        277,
+        140,
+        0
+      ],
+      "max": [
+        355,
+        305,
+        28
+      ],
+      "color": "#d0c5b5",
+      "status": "proposed",
+      "source": "使用者：沙發在左側、背靠和室半牆；外尺寸依原圖位置暫示意",
+      "wall": false
+    },
+    {
+      "id": "sofa-back",
+      "name": "沙發靠背",
+      "kind": "furniture",
+      "room": "living",
+      "min": [
+        277,
+        140,
+        28
+      ],
+      "max": [
+        291,
+        305,
+        77
+      ],
+      "color": "#beb3a2",
+      "status": "proposed",
+      "source": "沙發示意；背面朝和室",
+      "wall": false
+    },
+    {
+      "id": "sofa-seat-1",
+      "name": "沙發坐墊 1",
+      "kind": "furniture",
+      "room": "living",
+      "min": [
+        291,
+        149,
+        28
+      ],
+      "max": [
+        353,
+        221,
+        44
+      ],
+      "color": "#dbd2c4",
+      "status": "proposed",
+      "source": "沙發示意",
+      "wall": false
+    },
+    {
+      "id": "sofa-seat-2",
+      "name": "沙發坐墊 2",
+      "kind": "furniture",
+      "room": "living",
+      "min": [
+        291,
+        224,
+        28
+      ],
+      "max": [
+        353,
+        296,
+        44
+      ],
+      "color": "#dbd2c4",
+      "status": "proposed",
+      "source": "沙發示意",
+      "wall": false
+    },
+    {
+      "id": "sofa-arm-a",
+      "name": "沙發扶手",
+      "kind": "furniture",
+      "room": "living",
+      "min": [
+        291,
+        140,
+        28
+      ],
+      "max": [
+        355,
+        149,
+        57
+      ],
+      "color": "#c9bead",
+      "status": "proposed",
+      "source": "沙發示意",
+      "wall": false
+    },
+    {
+      "id": "sofa-arm-b",
+      "name": "沙發扶手",
+      "kind": "furniture",
+      "room": "living",
+      "min": [
+        291,
+        296,
+        28
+      ],
+      "max": [
+        355,
+        305,
+        57
+      ],
+      "color": "#c9bead",
+      "status": "proposed",
+      "source": "沙發示意",
+      "wall": false
+    },
+    {
+      "id": "tv-console",
+      "name": "原圖右側電視櫃",
+      "kind": "furniture",
+      "room": "living",
+      "min": [
+        550,
+        157,
+        0
+      ],
+      "max": [
+        587.5,
+        320,
+        42
+      ],
+      "color": "#a79a85",
+      "status": "proposed",
+      "source": "PL-01 電視櫃所在側；尺寸待確認",
+      "wall": false
+    },
+    {
+      "id": "tv",
+      "name": "唯一電視 · 客廳右側",
+      "kind": "tv",
+      "room": "living",
+      "min": [
+        546,
+        175,
+        70
+      ],
+      "max": [
+        551,
+        298,
+        140
+      ],
+      "color": "#38413f",
+      "status": "proposed",
+      "source": "原圖右側；禁止沙發背後新增電視",
+      "note": "尺寸為展示占位，位置關係已確認",
+      "wall": false
+    },
+    {
+      "id": "kitchen-base",
+      "name": "廚具下櫃",
+      "kind": "furniture",
+      "room": "kitchen",
+      "min": [
+        275,
+        530,
+        0
+      ],
+      "max": [
+        336,
+        755,
+        85
+      ],
+      "color": "#c4c7bb",
+      "status": "proposed",
+      "source": "PL-01 61 cm 深度分段；高度及分段待確認",
+      "wall": false
+    },
+    {
+      "id": "kitchen-counter",
+      "name": "廚具檯面",
+      "kind": "furniture",
+      "room": "kitchen",
+      "min": [
+        275,
+        530,
+        85
+      ],
+      "max": [
+        336,
+        755,
+        89
+      ],
+      "color": "#edebe3",
+      "status": "proposed",
+      "source": "檯面高度暫示意",
+      "wall": false
+    },
+    {
+      "id": "sink",
+      "name": "水槽位置",
+      "kind": "fixture",
+      "room": "kitchen",
+      "min": [
+        282,
+        552,
+        89
+      ],
+      "max": [
+        325,
+        602,
+        91
+      ],
+      "color": "#899b99",
+      "status": "proposed",
+      "source": "PL-01 水槽位置；設備外尺寸待確認",
+      "wall": false
+    },
+    {
+      "id": "hob",
+      "name": "爐具位置",
+      "kind": "fixture",
+      "room": "kitchen",
+      "min": [
+        282,
+        672,
+        89
+      ],
+      "max": [
+        325,
+        726,
+        91
+      ],
+      "color": "#53605b",
+      "status": "proposed",
+      "source": "PL-01 爐具位置；設備外尺寸待確認",
+      "wall": false
+    },
+    {
+      "id": "fridge",
+      "name": "冰箱位置",
+      "kind": "furniture",
+      "room": "kitchen",
+      "min": [
+        275,
+        460.4,
+        0
+      ],
+      "max": [
+        336,
+        530,
+        180
+      ],
+      "color": "#b0b5ad",
+      "status": "proposed",
+      "source": "PL-01 REF；尺寸為占位",
+      "wall": false
+    },
+    {
+      "id": "island",
+      "name": "中島 · 90 × 90",
+      "kind": "furniture",
+      "room": "kitchen",
+      "min": [
+        426,
+        625,
+        0
+      ],
+      "max": [
+        516,
+        715,
+        90
+      ],
+      "color": "#c2b49e",
+      "status": "drawing",
+      "source": "PL-01 90×90；左側距 90、上側距 40；高度 90 暫示意",
+      "wall": false
+    },
+    {
+      "id": "table",
+      "name": "餐桌 · 70 × 130",
+      "kind": "furniture",
+      "room": "kitchen",
+      "min": [
+        436,
+        495,
+        73
+      ],
+      "max": [
+        506,
+        625,
+        77
+      ],
+      "color": "#c7bda9",
+      "status": "drawing",
+      "source": "PL-01 70×130；桌高及桌板厚暫示意",
+      "wall": false
+    },
+    {
+      "id": "table-leg-444-506",
+      "name": "餐桌腳",
+      "kind": "furniture",
+      "room": "kitchen",
+      "min": [
+        444,
+        506,
+        0
+      ],
+      "max": [
+        449,
+        511,
+        73
+      ],
+      "color": "#b0a58f",
+      "status": "proposed",
+      "source": "餐桌構造占位",
+      "wall": false
+    },
+    {
+      "id": "table-leg-444-612",
+      "name": "餐桌腳",
+      "kind": "furniture",
+      "room": "kitchen",
+      "min": [
+        444,
+        612,
+        0
+      ],
+      "max": [
+        449,
+        617,
+        73
+      ],
+      "color": "#b0a58f",
+      "status": "proposed",
+      "source": "餐桌構造占位",
+      "wall": false
+    },
+    {
+      "id": "table-leg-492-506",
+      "name": "餐桌腳",
+      "kind": "furniture",
+      "room": "kitchen",
+      "min": [
+        492,
+        506,
+        0
+      ],
+      "max": [
+        497,
+        511,
+        73
+      ],
+      "color": "#b0a58f",
+      "status": "proposed",
+      "source": "餐桌構造占位",
+      "wall": false
+    },
+    {
+      "id": "table-leg-492-612",
+      "name": "餐桌腳",
+      "kind": "furniture",
+      "room": "kitchen",
+      "min": [
+        492,
+        612,
+        0
+      ],
+      "max": [
+        497,
+        617,
+        73
+      ],
+      "color": "#b0a58f",
+      "status": "proposed",
+      "source": "餐桌構造占位",
+      "wall": false
+    },
+    {
+      "id": "master-bed",
+      "name": "主臥加大雙人床墊占位 · 182 × 188",
+      "kind": "furniture",
+      "room": "master",
+      "min": [
+        670,
+        513,
+        0
+      ],
+      "max": [
+        858,
+        695,
+        45
+      ],
+      "color": "#e4dfd2",
+      "status": "proposed",
+      "source": "使用者要求：台規加大雙人床墊 182 × 188；右側仍留原圖約7 cm；床架外框、床頭板與實際定位待確認",
+      "wall": false
+    },
+    {
+      "id": "master-daybed",
+      "name": "主臥靠窗整面臥榻（突出占位）",
+      "kind": "furniture",
+      "room": "master",
+      "min": [
+        596.5,
+        695,
+        0
+      ],
+      "max": [
+        865,
+        755,
+        45
+      ],
+      "color": "#c4b499",
+      "status": "proposed",
+      "source": "沿主臥靠窗上側整面牆；暫按268.5 × 60 × H45 cm，與加大床架相接；實際深度、高度、收口與窗扇開啟淨空待確認",
+      "wall": false
+    },
+    {
+      "id": "master-pillow-a",
+      "name": "枕頭示意",
+      "kind": "furniture",
+      "room": "master",
+      "min": [
+        827,
+        566,
+        45
+      ],
+      "max": [
+        855,
+        623,
+        53
+      ],
+      "color": "#f3efe6",
+      "status": "proposed",
+      "source": "展示示意",
+      "wall": false
+    },
+    {
+      "id": "master-pillow-b",
+      "name": "枕頭示意",
+      "kind": "furniture",
+      "room": "master",
+      "min": [
+        827,
+        634,
+        45
+      ],
+      "max": [
+        855,
+        692,
+        53
+      ],
+      "color": "#f3efe6",
+      "status": "proposed",
+      "source": "展示示意",
+      "wall": false
+    },
+    {
+      "id": "electrical-cabinet",
+      "name": "電器櫃（右側牆暫定）",
+      "kind": "furniture",
+      "room": "closet",
+      "min": [
+        805,
+        326,
+        0
+      ],
+      "max": [
+        865,
+        405,
+        220
+      ],
+      "color": "#8f806d",
+      "status": "proposed",
+      "source": "使用者需求：電器櫃整合路由器、NAS、Switch、PS5",
+      "note": "為避開更衣室左側收門袋，電器櫃暫移至右側牆；分層、散熱、插座與維修淨空待確認",
+      "wall": false
+    },
+    {
+      "id": "electrical-cabinet-service",
+      "name": "電器櫃前方維修／散熱淨空（暫定）",
+      "kind": "furniture",
+      "room": "closet",
+      "min": [
+        745,
+        326,
+        0
+      ],
+      "max": [
+        805,
+        405,
+        220
+      ],
+      "color": "#c3ab7f",
+      "status": "proposed",
+      "source": "本版電器櫃右側牆避讓配置",
+      "note": "只作動線檢查占位；不得視為已確認的櫃前淨尺寸或設備尺寸",
+      "opacity": 0.12,
+      "wall": false
+    },
+    {
+      "id": "closet-right",
+      "name": "更衣室右側一般收納櫃（避開電器櫃與牆盒）",
+      "kind": "furniture",
+      "room": "closet",
+      "min": [
+        810,
+        410,
+        0
+      ],
+      "max": [
+        865,
+        425,
+        220
+      ],
+      "color": "#b8aa93",
+      "status": "proposed",
+      "source": "與電器櫃及牆內收門盒分區；櫃體尺寸與整合方式待確認",
+      "wall": false
+    },
+    {
+      "id": "closet-left",
+      "name": "更衣室左側櫃（避開牆內收門盒）",
+      "kind": "furniture",
+      "room": "closet",
+      "min": [
+        611.5,
+        323,
+        0
+      ],
+      "max": [
+        647,
+        425,
+        220
+      ],
+      "color": "#b8aa93",
+      "status": "proposed",
+      "source": "本版不作電器櫃；牆內收門盒位於更衣室南側；櫃體實際深度待確認",
+      "wall": false
+    },
+    {
+      "id": "bath-tub",
+      "name": "主衛浴浴缸",
+      "kind": "fixture",
+      "room": "mainbath",
+      "min": [
+        785,
+        171,
+        0
+      ],
+      "max": [
+        856,
+        299,
+        55
+      ],
+      "color": "#edf0eb",
+      "status": "proposed",
+      "source": "PL-01 浴缸位置；尺寸待確認",
+      "wall": false
+    },
+    {
+      "id": "bath-tub-water",
+      "name": "浴缸內部示意",
+      "kind": "fixture",
+      "room": "mainbath",
+      "min": [
+        794,
+        182,
+        55
+      ],
+      "max": [
+        847,
+        288,
+        56
+      ],
+      "color": "#adc3be",
+      "status": "proposed",
+      "source": "設備外觀占位",
+      "wall": false
+    },
+    {
+      "id": "main-wash",
+      "name": "主衛浴面盆",
+      "kind": "fixture",
+      "room": "mainbath",
+      "min": [
+        605,
+        262,
+        0
+      ],
+      "max": [
+        650,
+        304,
+        82
+      ],
+      "color": "#e6ece6",
+      "status": "proposed",
+      "source": "PL-01 設備位置；尺寸待確認",
+      "wall": false
+    },
+    {
+      "id": "main-wc",
+      "name": "主衛浴馬桶",
+      "kind": "fixture",
+      "room": "mainbath",
+      "min": [
+        605,
+        188,
+        0
+      ],
+      "max": [
+        663,
+        235,
+        44
+      ],
+      "color": "#e6ece6",
+      "status": "proposed",
+      "source": "PL-01 設備位置；尺寸待確認",
+      "wall": false
+    },
+    {
+      "id": "bath-wash",
+      "name": "次衛浴面盆",
+      "kind": "fixture",
+      "room": "bath",
+      "min": [
+        609,
+        8,
+        0
+      ],
+      "max": [
+        660,
+        58,
+        82
+      ],
+      "color": "#e6ece6",
+      "status": "proposed",
+      "source": "PL-01 設備位置；尺寸待確認",
+      "wall": false
+    },
+    {
+      "id": "bath-wc",
+      "name": "次衛浴馬桶",
+      "kind": "fixture",
+      "room": "bath",
+      "min": [
+        690,
+        8,
+        0
+      ],
+      "max": [
+        735,
+        72,
+        44
+      ],
+      "color": "#e6ece6",
+      "status": "proposed",
+      "source": "PL-01 設備位置；尺寸待確認",
+      "wall": false
+    },
+    {
+      "id": "shower-screen",
+      "name": "次衛浴淋浴分隔",
+      "kind": "glass",
+      "room": "bath",
+      "min": [
+        759,
+        0,
+        0
+      ],
+      "max": [
+        761,
+        150,
+        210
+      ],
+      "color": "#85b9b5",
+      "status": "proposed",
+      "source": "PL-01 淋浴位置；分隔與高度待確認",
+      "note": "玻璃厚度／框型暫示意",
+      "opacity": 0.28,
+      "wall": false
+    },
+    {
+      "id": "entrance-cabinet",
+      "name": "玄關櫃・客廳段",
+      "kind": "furniture",
+      "room": "living",
+      "min": [
+        275,
+        0,
+        0
+      ],
+      "max": [
+        456,
+        40,
+        105
+      ],
+      "color": "#b9aa94",
+      "status": "proposed",
+      "source": "玄關櫃整排的客廳段；前緣、高度、櫃深與門片形式待確認",
+      "wall": false
+    },
+    {
+      "id": "tatami-entry-cabinet",
+      "name": "玄關櫃・次臥延伸段",
+      "kind": "furniture",
+      "room": "tatami",
+      "min": [
+        0,
+        0,
+        0
+      ],
+      "max": [
+        266,
+        40,
+        105
+      ],
+      "color": "#b9aa94",
+      "status": "proposed",
+      "source": "與玄關櫃客廳段同一排延伸；跨越牆厚處須保留次臥門洞與結構牆，櫃體前緣、高度、櫃深與收口待確認",
+      "wall": false
+    },
+    {
+      "id": "entry-door",
+      "name": "玄關門洞",
+      "kind": "door",
+      "room": "living",
+      "min": [
+        467.5,
+        -1,
+        0
+      ],
+      "max": [
+        577.5,
+        1,
+        210
+      ],
+      "color": "#a28f72",
+      "status": "proposed",
+      "source": "下鏈入口 110；門高 210 為示意",
+      "wall": false
+    },
+    {
+      "id": "tatami-door",
+      "name": "次臥門洞",
+      "kind": "door",
+      "room": "tatami",
+      "min": [
+        266,
+        42,
+        0
+      ],
+      "max": [
+        268,
+        128,
+        210
+      ],
+      "color": "#a28f72",
+      "status": "proposed",
+      "source": "PL-01 位置；門尺寸待確認",
+      "wall": false
+    },
+    {
+      "id": "master-door",
+      "name": "主臥門洞",
+      "kind": "door",
+      "room": "master",
+      "min": [
+        588,
+        460.4,
+        0
+      ],
+      "max": [
+        590,
+        550,
+        210
+      ],
+      "color": "#a28f72",
+      "status": "proposed",
+      "source": "PL-01 位置；門尺寸待確認",
+      "wall": false
+    },
+    {
+      "id": "balcony-door",
+      "name": "工作陽台門洞",
+      "kind": "door",
+      "room": "balcony",
+      "min": [
+        261,
+        373,
+        0
+      ],
+      "max": [
+        263,
+        460.4,
+        210
+      ],
+      "color": "#a28f72",
+      "status": "proposed",
+      "source": "PL-01 位置；門尺寸待確認",
+      "wall": false
+    },
+    {
+      "id": "kitchen-living-panel-1",
+      "name": "廚房／客廳玻璃門 1/4",
+      "kind": "door",
+      "room": "kitchen",
+      "min": [
+        275,
+        450.59999999999997,
+        0
+      ],
+      "max": [
+        353.125,
+        452.2,
+        295
+      ],
+      "color": "#86aaa1",
+      "status": "proposed",
+      "source": "全寬312.5 cm；4扇暫按每扇78.125 cm；參考影片採同步連動牆內收門",
+      "note": "關閉狀態；玻璃厚度、五金與牆盒尺寸待廠商",
+      "opacity": 0.18,
+      "wall": false
+    },
+    {
+      "id": "kitchen-living-panel-2",
+      "name": "廚房／客廳玻璃門 2/4",
+      "kind": "door",
+      "room": "kitchen",
+      "min": [
+        353.125,
+        450.59999999999997,
+        0
+      ],
+      "max": [
+        431.25,
+        452.2,
+        295
+      ],
+      "color": "#86aaa1",
+      "status": "proposed",
+      "source": "全寬312.5 cm；4扇暫按每扇78.125 cm；參考影片採同步連動牆內收門",
+      "note": "關閉狀態；玻璃厚度、五金與牆盒尺寸待廠商",
+      "opacity": 0.18,
+      "wall": false
+    },
+    {
+      "id": "kitchen-living-panel-3",
+      "name": "廚房／客廳玻璃門 3/4",
+      "kind": "door",
+      "room": "kitchen",
+      "min": [
+        431.25,
+        450.59999999999997,
+        0
+      ],
+      "max": [
+        509.375,
+        452.2,
+        295
+      ],
+      "color": "#86aaa1",
+      "status": "proposed",
+      "source": "全寬312.5 cm；4扇暫按每扇78.125 cm；參考影片採同步連動牆內收門",
+      "note": "關閉狀態；玻璃厚度、五金與牆盒尺寸待廠商",
+      "opacity": 0.18,
+      "wall": false
+    },
+    {
+      "id": "kitchen-living-panel-4",
+      "name": "廚房／客廳玻璃門 4/4",
+      "kind": "door",
+      "room": "kitchen",
+      "min": [
+        509.375,
+        450.59999999999997,
+        0
+      ],
+      "max": [
+        587.5,
+        452.2,
+        295
+      ],
+      "color": "#86aaa1",
+      "status": "proposed",
+      "source": "全寬312.5 cm；4扇暫按每扇78.125 cm；參考影片採同步連動牆內收門",
+      "note": "關閉狀態；玻璃厚度、五金與牆盒尺寸待廠商",
+      "opacity": 0.18,
+      "wall": false
+    },
+    {
+      "id": "kitchen-living-partition-track",
+      "name": "312.5 cm玻璃門上吊軌",
+      "kind": "door",
+      "room": "kitchen",
+      "min": [
+        275,
+        450.2,
+        292
+      ],
+      "max": [
+        587.5,
+        452.59999999999997,
+        295
+      ],
+      "color": "#a88959",
+      "status": "proposed",
+      "source": "使用者指定全寬312.5 cm；吊軌需固定於結構補強",
+      "note": "停放端改至更衣室側；軌道剖面待確認",
+      "opacity": 0.22,
+      "wall": false
+    }
+  ],
+  "checks": [
+    {
+      "id": "A01",
+      "title": "原圖尺寸鏈",
+      "result": "pass",
+      "detail": "上／下 865；左／右 755 cm，四組加總一致。"
+    },
+    {
+      "id": "A02",
+      "title": "房間與門窗定位",
+      "result": "pending",
+      "detail": "主空間按尺寸鏈；未標的門窗端點及外牆厚仍需複核。"
+    },
+    {
+      "id": "A03",
+      "title": "主臥、更衣室與衛浴牆面共線",
+      "result": "pass",
+      "detail": "牆段共用左側面 X=587.5 cm；門洞上下段仍保持同一完成面。"
+    },
+    {
+      "id": "A04",
+      "title": "主臥玻璃",
+      "result": "pending",
+      "detail": "玻璃實體已建；上緣暫接廚房 295 cm 預留天花。"
+    },
+    {
+      "id": "A05",
+      "title": "次臥上方完全開放",
+      "result": "pass",
+      "detail": "實際半牆頂 90 cm，上方無玻璃或高牆；量測基準待確認。"
+    },
+    {
+      "id": "A06",
+      "title": "和室平台 +45",
+      "result": "pass",
+      "detail": "實體完成面 +45 cm；平台平面範圍仍為草模。"
+    },
+    {
+      "id": "A07",
+      "title": "長桌在半牆和室側",
+      "result": "pass",
+      "detail": "桌背貼半牆；次臥左側外牆沒有另加書桌。"
+    },
+    {
+      "id": "A08",
+      "title": "桌下連續腿部空間",
+      "result": "pass",
+      "detail": "連續淨空 180 × 60 × 70 cm；尺寸與落腳面暫定。"
+    },
+    {
+      "id": "A09",
+      "title": "電視只在客廳右側",
+      "result": "pass",
+      "detail": "僅一台電視；沙發在左側，背後沒有電視／電視牆。"
+    },
+    {
+      "id": "A10",
+      "title": "窗台與地坪基準",
+      "result": "pending",
+      "detail": "廚房／主臥 +40；次臥暫 +120。次臥量測面及窗頂待確認。"
+    },
+    {
+      "id": "A11",
+      "title": "工作陽台至露台無門檻",
+      "result": "pending",
+      "detail": "模型交界無新增檻、暫採連續地坪；現場標高、坡度未確認。"
+    },
+    {
+      "id": "A12",
+      "title": "樓高與廚房降板",
+      "result": "pending",
+      "detail": "樓高 340 已提供；預留 45，淨高暫 295。樓板／設備尺寸仍需核對。"
+    },
+    {
+      "id": "A13",
+      "title": "廚房／客廳312.5 cm玻璃隔間",
+      "result": "pass",
+      "detail": "4扇暫按每扇78.125 cm；關閉線跨越冰箱上方與側邊，門片往右端牆內收。"
+    },
+    {
+      "id": "A14",
+      "title": "右端牆內收門盒",
+      "result": "pending",
+      "detail": "本版改為牆內收門盒示意；盒體厚度、軌道、檢修面、結構補強及木作收口須以廠商平面／剖面覆核。"
+    },
+    {
+      "id": "A15",
+      "title": "工作陽台出口不放收門堆疊",
+      "result": "pass",
+      "detail": "收門盒位於廚房／客廳隔間右端；冰箱與工作陽台側未建立門片堆疊。"
+    },
+    {
+      "id": "A16",
+      "title": "電器櫃避開牆內收門盒",
+      "result": "pass",
+      "detail": "電器櫃暫置更衣室右側牆；與右端牆內收門盒分離，設備分層與實際維修淨空仍待確認。"
+    },
+    {
+      "id": "A17",
+      "title": "加大床與整面窗邊臥榻示意",
+      "result": "pending",
+      "detail": "床墊暫按182×188 cm；臥榻沿主臥靠窗整面牆暫按268.5×60 cm並與床架相接。床架外框、臥榻收口、窗扇開啟及實際走道待確認。"
+    },
+    {
+      "id": "A18",
+      "title": "玄關櫃延伸至次臥",
+      "result": "pending",
+      "detail": "玄關櫃分為客廳段與次臥段，前緣與高度暫對齊；次臥門洞、牆厚、櫃深、內部分格與收口待確認。"
+    }
+  ]
+}
