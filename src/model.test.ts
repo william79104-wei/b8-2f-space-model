@@ -87,3 +87,30 @@ test('integrated dressing-room cabinet uses the requested 70/41/20 split',()=>{
   assert.equal(validateModel(parts,defaults).find(c=>c.id==='A20')!.result,'pass');
   assert.equal(validateModel(parts,defaults).find(c=>c.id==='A22')!.result,'pass');
 });
+test('removes front service placeholder and adds the full right wardrobe',()=>{
+  const parts=createModel(defaults);
+  assert.equal(parts.some(p=>p.id==='electrical-cabinet-service'),false);
+  assert.equal(parts.some(p=>p.id==='closet-right'),false);
+  assert.equal(parts.some(p=>p.id==='closet-right-aisle-reference'),false);
+  const right=parts.find(p=>p.id==='closet-right-full-wardrobe')!;
+  assert.deepEqual(right.min,[805,320.4,0]);
+  assert.deepEqual(right.max,[865,451.4,220]);
+  assert.equal(validateModel(parts,defaults).find(c=>c.id==='A22')!.result,'pass');
+});
+test('moves the bed and models the open charging niche headboard',()=>{
+  const parts=createModel(defaults);
+  const bed=parts.find(p=>p.id==='master-bed')!;
+  const lower=parts.find(p=>p.id==='master-headboard-cabinet-lower')!;
+  const niche=parts.find(p=>p.id==='master-headboard-charging-niche')!;
+  const upper=parts.find(p=>p.id==='master-headboard-cabinet-upper')!;
+  const daybed=parts.find(p=>p.id==='master-daybed')!;
+  assert.deepEqual(bed.min,[657,513,0]);
+  assert.deepEqual(bed.max,[845,695,45]);
+  assert.deepEqual(lower.min,[845,513,0]);
+  assert.deepEqual(lower.max,[865,695,75]);
+  assert.deepEqual(niche.min,[845,513,75]);
+  assert.deepEqual(niche.max,[862,695,95]);
+  assert.equal(upper.max[2],110);
+  assert.equal(overlap(lower,daybed),false);
+  assert.equal(validateModel(parts,defaults).find(c=>c.id==='A24')!.result,'pass');
+});

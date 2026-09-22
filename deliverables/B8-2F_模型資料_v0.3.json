@@ -1508,18 +1508,18 @@
       "kind": "furniture",
       "room": "master",
       "min": [
-        670,
+        657,
         513,
         0
       ],
       "max": [
-        858,
+        845,
         695,
         45
       ],
       "color": "#e4dfd2",
       "status": "proposed",
-      "source": "使用者要求：台規加大雙人床墊 182 × 188；右側仍留原圖約7 cm；床架外框、床頭板與實際定位待確認",
+      "source": "使用者本次指定：台規加大雙人床墊 182 × 188；床往左移13 cm，左側暫留約60.5 cm；床架外框、床頭板與實際定位待確認",
       "wall": false
     },
     {
@@ -1548,18 +1548,18 @@
       "kind": "furniture",
       "room": "master",
       "min": [
-        827,
+        814,
         566,
         45
       ],
       "max": [
-        855,
+        842,
         623,
         53
       ],
       "color": "#f3efe6",
       "status": "proposed",
-      "source": "展示示意",
+      "source": "跟隨床墊左移13 cm",
       "wall": false
     },
     {
@@ -1568,18 +1568,140 @@
       "kind": "furniture",
       "room": "master",
       "min": [
-        827,
+        814,
         634,
         45
       ],
       "max": [
-        855,
+        842,
         692,
         53
       ],
       "color": "#f3efe6",
       "status": "proposed",
-      "source": "展示示意",
+      "source": "跟隨床墊左移13 cm",
+      "wall": false
+    },
+    {
+      "id": "master-headboard-cabinet-lower",
+      "name": "主臥整排薄型床頭櫃・下方櫃體 · 182 × 20 × 75",
+      "kind": "furniture",
+      "room": "master",
+      "min": [
+        845,
+        513,
+        0
+      ],
+      "max": [
+        865,
+        695,
+        75
+      ],
+      "color": "#a8957c",
+      "status": "proposed",
+      "source": "床寬同為182 cm；右側貼齊 X=865 牆面；下方櫃體內走線，維修板可拆",
+      "wall": false
+    },
+    {
+      "id": "master-headboard-charging-niche",
+      "name": "主臥床頭櫃開放式充電凹槽 · 182 × 17 × 20",
+      "kind": "niche",
+      "room": "master",
+      "min": [
+        845,
+        513,
+        75
+      ],
+      "max": [
+        862,
+        695,
+        95
+      ],
+      "color": "#d7cdbd",
+      "status": "proposed",
+      "source": "使用者本次指定；床頭櫃方案",
+      "note": "凹槽底 FL+75、頂 FL+95；有效深度暫按17 cm；保持開放，不做密閉門片，左右各預留110V／USB-C位置與穿線孔",
+      "opacity": 0.12,
+      "wall": false
+    },
+    {
+      "id": "master-headboard-niche-back",
+      "name": "充電凹槽背板及藏線空間 · 182 × 3 × 20",
+      "kind": "furniture",
+      "room": "master",
+      "min": [
+        862,
+        513,
+        75
+      ],
+      "max": [
+        865,
+        695,
+        95
+      ],
+      "color": "#9f8c73",
+      "status": "proposed",
+      "source": "凹槽後方保留3 cm背板／藏線空間；背板可拆或局部開孔，插座與線路配置待水電複核",
+      "wall": false
+    },
+    {
+      "id": "master-headboard-cabinet-upper",
+      "name": "主臥整排薄型床頭櫃・上方收邊 · 182 × 20 × 15",
+      "kind": "furniture",
+      "room": "master",
+      "min": [
+        845,
+        513,
+        95
+      ],
+      "max": [
+        865,
+        695,
+        110
+      ],
+      "color": "#a8957c",
+      "status": "proposed",
+      "source": "凹槽上方保留約15 cm櫃體收邊；與下方櫃體共用外框",
+      "wall": false
+    },
+    {
+      "id": "master-headboard-outlet-left",
+      "name": "床頭充電凹槽左側插座／USB-C暫定",
+      "kind": "fixture",
+      "room": "master",
+      "min": [
+        861,
+        520,
+        84
+      ],
+      "max": [
+        862,
+        532,
+        90
+      ],
+      "color": "#687b72",
+      "status": "proposed",
+      "source": "左側110V插座及USB-C／充電器位置暫定；優先藏於凹槽上緣、後方或側面",
+      "wall": false
+    },
+    {
+      "id": "master-headboard-outlet-right",
+      "name": "床頭充電凹槽右側插座／USB-C暫定",
+      "kind": "fixture",
+      "room": "master",
+      "min": [
+        861,
+        676,
+        84
+      ],
+      "max": [
+        862,
+        688,
+        90
+      ],
+      "color": "#687b72",
+      "status": "proposed",
+      "source": "右側110V插座及USB-C／充電器位置暫定；電線由櫃內下走，凹槽底／後方預留穿線孔",
       "wall": false
     },
     {
@@ -1622,7 +1744,7 @@
       "color": "#8f806d",
       "status": "proposed",
       "source": "使用者指定：41 cm寬；朝客廳／電視牆側開啟；容納PS5、NAS、小型Switch、路由器、插座、變壓器與網路線材",
-      "note": "與衣櫃共用外部櫃體但內部完全分隔；下方進風、上方排風；18 mm板材估算淨寬37.4、淨深56.4、淨高216.4 cm，實際需扣背板、門片與五金",
+      "note": "與衣櫃共用外部櫃體但內部完全分隔；木質格柵門下方進風、上方排風；櫃後預留8–10 cm理線及排熱通道；背板局部開孔或不完全封閉，層板後方留縫／通風層板，頂部預留低噪音溫控排風扇；PS5與NAS分層；18 mm板材估算淨寬37.4、淨深56.4、淨高216.4 cm，實際需扣背板、門片與五金",
       "opacity": 0.82,
       "wall": false
     },
@@ -1648,6 +1770,50 @@
       "wall": false
     },
     {
+      "id": "electrical-cabinet-rear-vent-channel",
+      "name": "電器櫃後方8–10 cm理線／排熱通道",
+      "kind": "furniture",
+      "room": "closet",
+      "min": [
+        656.5,
+        320.4,
+        0
+      ],
+      "max": [
+        666.5,
+        361.4,
+        220
+      ],
+      "color": "#a9b3a4",
+      "status": "proposed",
+      "source": "使用者散熱設計要求",
+      "note": "櫃後通道暫按10 cm；背板局部開孔或不完全封閉，線材與熱氣向上排出",
+      "opacity": 0.12,
+      "wall": false
+    },
+    {
+      "id": "electrical-cabinet-fan-reserve",
+      "name": "電器櫃頂部低噪音溫控排風扇預留",
+      "kind": "fixture",
+      "room": "closet",
+      "min": [
+        604.5,
+        328.4,
+        205
+      ],
+      "max": [
+        648.5,
+        353.4,
+        220
+      ],
+      "color": "#687b72",
+      "status": "proposed",
+      "source": "使用者散熱設計要求",
+      "note": "只作風扇位置占位；風量、噪音、電源與檢修方式待設備及木作確認",
+      "opacity": 0.16,
+      "wall": false
+    },
+    {
       "id": "closet-wardrobe-module",
       "name": "更衣室衣櫃・整合櫃更衣室側開啟 · 70 × 60 × 220",
       "kind": "furniture",
@@ -1670,50 +1836,8 @@
       "wall": false
     },
     {
-      "id": "electrical-cabinet-service",
-      "name": "電器櫃客廳側維修／散熱淨空（暫定）",
-      "kind": "furniture",
-      "room": "living",
-      "min": [
-        536.5,
-        320.4,
-        0
-      ],
-      "max": [
-        596.5,
-        361.4,
-        220
-      ],
-      "color": "#c3ab7f",
-      "status": "proposed",
-      "source": "維修／散熱淨空改置格柵門正前方、客廳／電視牆側；暫按60 cm深占位",
-      "note": "只作動線與散熱檢查；不代表正式施工淨空，且需與客廳至更衣室門洞、門扇開向及現場收口複核",
-      "opacity": 0.12,
-      "wall": false
-    },
-    {
-      "id": "closet-right",
-      "name": "更衣室右側一般收納櫃（保留原配置）",
-      "kind": "furniture",
-      "room": "closet",
-      "min": [
-        810,
-        410,
-        0
-      ],
-      "max": [
-        865,
-        425,
-        220
-      ],
-      "color": "#b8aa93",
-      "status": "proposed",
-      "source": "保留原模型右側一般收納占位；不再放置獨立電器櫃",
-      "wall": false
-    },
-    {
-      "id": "closet-right-aisle-reference",
-      "name": "更衣室右側60 cm櫃深走道參考",
+      "id": "closet-right-full-wardrobe",
+      "name": "更衣室右側整面衣櫃 · 131 × 60 × 220",
       "kind": "furniture",
       "room": "closet",
       "min": [
@@ -1723,14 +1847,13 @@
       ],
       "max": [
         865,
-        431.4,
+        451.4,
         220
       ],
-      "color": "#c7b99f",
+      "color": "#b8aa93",
       "status": "proposed",
-      "source": "只作「左右兩側皆採60 cm深」的走道驗證參考，不代表新增或定案木作櫃",
-      "note": "若右側最終採60 cm深，與左側整合櫃之間的理論中央走道為148.5 cm",
-      "opacity": 0.08,
+      "source": "使用者指定：完整右側衣櫃；櫃門朝更衣室中央走道開啟，只作衣物及一般收納",
+      "note": "內部分格、吊衣桿、抽屜、門片形式、板材與收口待確認",
       "wall": false
     },
     {
@@ -2207,7 +2330,7 @@
       "id": "A17",
       "title": "加大床與整面窗邊臥榻示意",
       "result": "pending",
-      "detail": "床墊暫按182×188 cm；臥榻沿主臥靠窗整面牆暫按268.5×60 cm並與床架相接。床架外框、臥榻收口、窗扇開啟及實際走道待確認。"
+      "detail": "床墊暫按182×188 cm並移至 X=657–845；臥榻沿主臥靠窗整面牆暫按268.5×60 cm，床架外框、臥榻收口、窗扇開啟及實際走道待確認。"
     },
     {
       "id": "A18",
@@ -2228,22 +2351,22 @@
       "detail": "電器櫃範圍 y=320.4–361.4；收門盒 y=431.4–451.4，兩者無幾何碰撞。"
     },
     {
-      "id": "A21",
-      "title": "格柵門前方維修／散熱空間",
-      "result": "pending",
-      "detail": "客廳側格柵門前暫留 60.0 cm；下方進風、上方排風及低噪音溫控扇位置已標示。 其 y範圍與客廳至更衣室門洞投影重疊，門扇開向與現場淨空需複核。"
-    },
-    {
       "id": "A22",
-      "title": "更衣室中央走道（雙側60 cm櫃深假設）",
+      "title": "更衣室中央走道（雙側60 cm櫃深）",
       "result": "pass",
-      "detail": "268.5 − 左側60 − 右側60 = 148.5 cm；右側櫃體目前僅作60 cm深度參考占位。"
+      "detail": "268.5 − 左側60 − 右側60 = 148.5 cm；右側已改為完整131 × 60 × 220 cm衣櫃。"
     },
     {
       "id": "A23",
       "title": "整合櫃與客廳至更衣室入口",
       "result": "pending",
-      "detail": "整合櫃前緣貼更衣室左側牆；客廳側維修區與既有入口門洞的門扇開向、轉身淨空及櫃體收口仍需平面／立面複核。"
+      "detail": "整合櫃前緣貼更衣室左側牆；客廳側開門、設備抽取與既有入口門洞的門扇開向、轉身淨空及櫃體收口仍需平面／立面複核。"
+    },
+    {
+      "id": "A24",
+      "title": "床頭櫃與床／臥榻／外牆碰撞",
+      "result": "pass",
+      "detail": "床頭櫃分為下櫃、FL+75–95開放凹槽、上方15 cm收邊；與床、Y=695窗邊臥榻及主臥外窗無重疊。"
     }
   ]
 }

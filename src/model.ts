@@ -134,13 +134,21 @@ export function createModel(s: Settings, doorState: DoorState = 'closed'): Part[
   add('island','中島 · 90 × 90','furniture','kitchen',[426,625,0],[516,715,90],'#c2b49e','drawing','PL-01 90×90；左側距 90、上側距 40；高度 90 暫示意');
   add('table','餐桌 · 70 × 130','furniture','kitchen',[436,495,73],[506,625,77],'#c7bda9','drawing','PL-01 70×130；桌高及桌板厚暫示意');
   for(const x of [444,492]) for(const y of [506,612]) add(`table-leg-${x}-${y}`,'餐桌腳','furniture','kitchen',[x,y,0],[x+5,y+5,73],'#b0a58f','proposed','餐桌構造占位');
-  // King mattress placeholder requested by the user: 182 × 188 cm. The
-  // window-side edge is held at 60 cm so the proposed daybed can sit beside
-  // the bed; frame dimensions remain unresolved.
-  add('master-bed','主臥加大雙人床墊占位 · 182 × 188','furniture','master',[670,513,0],[858,695,45],'#e4dfd2','proposed','使用者要求：台規加大雙人床墊 182 × 188；右側仍留原圖約7 cm；床架外框、床頭板與實際定位待確認');
+  // King mattress placeholder requested by the user: 182 × 188 cm. The bed
+  // moves 13 cm left so the 20 cm headboard cabinet can sit flush to X=865.
+  add('master-bed','主臥加大雙人床墊占位 · 182 × 188','furniture','master',[657,513,0],[845,695,45],'#e4dfd2','proposed','使用者本次指定：台規加大雙人床墊 182 × 188；床往左移13 cm，左側暫留約60.5 cm；床架外框、床頭板與實際定位待確認');
   add('master-daybed','主臥靠窗整面臥榻（突出占位）','furniture','master',[596.5,695,0],[865,755,45],'#c4b499','proposed','沿主臥靠窗上側整面牆；暫按268.5 × 60 × H45 cm，與加大床架相接；實際深度、高度、收口與窗扇開啟淨空待確認');
-  add('master-pillow-a','枕頭示意','furniture','master',[827,566,45],[855,623,53],'#f3efe6','proposed','展示示意');
-  add('master-pillow-b','枕頭示意','furniture','master',[827,634,45],[855,692,53],'#f3efe6','proposed','展示示意');
+  add('master-pillow-a','枕頭示意','furniture','master',[814,566,45],[842,623,53],'#f3efe6','proposed','跟隨床墊左移13 cm');
+  add('master-pillow-b','枕頭示意','furniture','master',[814,634,45],[842,692,53],'#f3efe6','proposed','跟隨床墊左移13 cm');
+  // Thin headboard cabinet with a real open charging niche between the lower
+  // cabinet and the upper trim. The back panel leaves a provisional 17 cm
+  // effective niche depth and a concealed cable route.
+  add('master-headboard-cabinet-lower','主臥整排薄型床頭櫃・下方櫃體 · 182 × 20 × 75','furniture','master',[845,513,0],[865,695,75],'#a8957c','proposed','床寬同為182 cm；右側貼齊 X=865 牆面；下方櫃體內走線，維修板可拆');
+  add('master-headboard-charging-niche','主臥床頭櫃開放式充電凹槽 · 182 × 17 × 20','niche','master',[845,513,75],[862,695,95],'#d7cdbd','proposed','使用者本次指定；床頭櫃方案','凹槽底 FL+75、頂 FL+95；有效深度暫按17 cm；保持開放，不做密閉門片，左右各預留110V／USB-C位置與穿線孔',0.12);
+  add('master-headboard-niche-back','充電凹槽背板及藏線空間 · 182 × 3 × 20','furniture','master',[862,513,75],[865,695,95],'#9f8c73','proposed','凹槽後方保留3 cm背板／藏線空間；背板可拆或局部開孔，插座與線路配置待水電複核');
+  add('master-headboard-cabinet-upper','主臥整排薄型床頭櫃・上方收邊 · 182 × 20 × 15','furniture','master',[845,513,95],[865,695,110],'#a8957c','proposed','凹槽上方保留約15 cm櫃體收邊；與下方櫃體共用外框');
+  add('master-headboard-outlet-left','床頭充電凹槽左側插座／USB-C暫定','fixture','master',[861,520,84],[862,532,90],'#687b72','proposed','左側110V插座及USB-C／充電器位置暫定；優先藏於凹槽上緣、後方或側面');
+  add('master-headboard-outlet-right','床頭充電凹槽右側插座／USB-C暫定','fixture','master',[861,676,84],[862,688,90],'#687b72','proposed','右側110V插座及USB-C／充電器位置暫定；電線由櫃內下走，凹槽底／後方預留穿線孔');
   // The wardrobe and the TV-wall electrical cabinet now share one carcass on
   // the dressing-room west side.  The 131 cm short side is divided into a
   // 70 cm wardrobe bay, a 41 cm grille electrical bay and a separate 20 cm
@@ -159,12 +167,12 @@ export function createModel(s: Settings, doorState: DoorState = 'closed'): Part[
   const cabinetX1 = cabinetX0 + cabinetDepth;
   const boardThickness = 1.8;
   add('closet-integrated-cabinet','更衣室左側整合櫃外框 · 111 × 60 × 220','furniture','closet',[cabinetX0,cabinetY0,0],[cabinetX1,cabinetY1,cabinetHeight],'#9d8d77','proposed','使用者本次指定：衣櫃與格柵電器櫃共用外部櫃體；總長111、深60、高220 cm','前緣與高度共用；牆內收門盒另占短邊20 cm；板材、背板、踢腳與木作收口待確認',0.16);
-  add('electrical-cabinet','格柵電器櫃・整合櫃客廳側開啟 · 41 × 60 × 220','furniture','closet',[cabinetX0,electricalY0,0],[cabinetX1,electricalY1,cabinetHeight],'#8f806d','proposed','使用者指定：41 cm寬；朝客廳／電視牆側開啟；容納PS5、NAS、小型Switch、路由器、插座、變壓器與網路線材','與衣櫃共用外部櫃體但內部完全分隔；下方進風、上方排風；18 mm板材估算淨寬37.4、淨深56.4、淨高216.4 cm，實際需扣背板、門片與五金',0.82);
+  add('electrical-cabinet','格柵電器櫃・整合櫃客廳側開啟 · 41 × 60 × 220','furniture','closet',[cabinetX0,electricalY0,0],[cabinetX1,electricalY1,cabinetHeight],'#8f806d','proposed','使用者指定：41 cm寬；朝客廳／電視牆側開啟；容納PS5、NAS、小型Switch、路由器、插座、變壓器與網路線材','與衣櫃共用外部櫃體但內部完全分隔；木質格柵門下方進風、上方排風；櫃後預留8–10 cm理線及排熱通道；背板局部開孔或不完全封閉，層板後方留縫／通風層板，頂部預留低噪音溫控排風扇；PS5與NAS分層；18 mm板材估算淨寬37.4、淨深56.4、淨高216.4 cm，實際需扣背板、門片與五金',0.82);
   add('electrical-cabinet-grille','電器櫃木質格柵門・實際進排風','furniture','closet',[cabinetX0,electricalY0,15],[cabinetX0+2,electricalY1,205],'#b99a70','proposed','格柵門朝客廳側；下方進風、上方排風；格柵有效開孔率、門片厚度與溫控排風扇待確認','不可只作裝飾；需保留設備散熱與濾塵／維修條件');
+  add('electrical-cabinet-rear-vent-channel','電器櫃後方8–10 cm理線／排熱通道','furniture','closet',[cabinetX1,electricalY0,0],[cabinetX1+10,electricalY1,cabinetHeight],'#a9b3a4','proposed','使用者散熱設計要求','櫃後通道暫按10 cm；背板局部開孔或不完全封閉，線材與熱氣向上排出',0.12);
+  add('electrical-cabinet-fan-reserve','電器櫃頂部低噪音溫控排風扇預留','fixture','closet',[cabinetX0+8,electricalY0+8,205],[cabinetX1-8,electricalY1-8,220],'#687b72','proposed','使用者散熱設計要求','只作風扇位置占位；風量、噪音、電源與檢修方式待設備及木作確認',0.16);
   add('closet-wardrobe-module','更衣室衣櫃・整合櫃更衣室側開啟 · 70 × 60 × 220','furniture','closet',[cabinetX0,wardrobeY0,0],[cabinetX1,wardrobeY1,cabinetHeight],'#b8aa93','proposed','使用者指定：70 cm寬；門片朝更衣室側開啟；與電器櫃共用外部櫃體但內部完全分隔','櫃內層板、吊掛、門片與收口待確認',0.82);
-  add('electrical-cabinet-service','電器櫃客廳側維修／散熱淨空（暫定）','furniture','living',[cabinetX0-60,electricalY0,0],[cabinetX0,electricalY1,cabinetHeight],'#c3ab7f','proposed','維修／散熱淨空改置格柵門正前方、客廳／電視牆側；暫按60 cm深占位','只作動線與散熱檢查；不代表正式施工淨空，且需與客廳至更衣室門洞、門扇開向及現場收口複核',0.12);
-  add('closet-right','更衣室右側一般收納櫃（保留原配置）','furniture','closet',[810,410,0],[865,425,220],'#b8aa93','proposed','保留原模型右側一般收納占位；不再放置獨立電器櫃');
-  add('closet-right-aisle-reference','更衣室右側60 cm櫃深走道參考','furniture','closet',[805,320.4,0],[865,431.4,220],'#c7b99f','proposed','只作「左右兩側皆採60 cm深」的走道驗證參考，不代表新增或定案木作櫃','若右側最終採60 cm深，與左側整合櫃之間的理論中央走道為148.5 cm',0.08);
+  add('closet-right-full-wardrobe','更衣室右側整面衣櫃 · 131 × 60 × 220','furniture','closet',[805,320.4,0],[865,451.4,220],'#b8aa93','proposed','使用者指定：完整右側衣櫃；櫃門朝更衣室中央走道開啟，只作衣物及一般收納','內部分格、吊衣桿、抽屜、門片形式、板材與收口待確認');
   add('bath-tub','主衛浴浴缸','fixture','mainbath',[785,171,0],[856,299,55],'#edf0eb','proposed','PL-01 浴缸位置；尺寸待確認');
   add('bath-tub-water','浴缸內部示意','fixture','mainbath',[794,182,55],[847,288,56],'#adc3be','proposed','設備外觀占位');
   add('main-wash','主衛浴面盆','fixture','mainbath',[605,262,0],[650,304,82],'#e6ece6','proposed','PL-01 設備位置；尺寸待確認');
@@ -217,13 +225,18 @@ export function validateModel(parts:Part[],s:Settings,doorState:DoorState='close
   const integrated=get('closet-integrated-cabinet');
   const electrical=get('electrical-cabinet');
   const wardrobe=get('closet-wardrobe-module');
-  const service=get('electrical-cabinet-service');
   const pocket=get('closet-parking-pocket');
   const cabinetDimsOK=Math.abs(integrated.max[0]-integrated.min[0]-60)<0.1&&Math.abs(integrated.max[1]-integrated.min[1]-111)<0.1&&Math.abs(integrated.max[2]-integrated.min[2]-220)<0.1&&Math.abs(electrical.max[1]-electrical.min[1]-41)<0.1&&Math.abs(wardrobe.max[1]-wardrobe.min[1]-70)<0.1;
-  const aisleReference=get('closet-right-aisle-reference');
-  const aisleWidth=aisleReference.min[0]-integrated.max[0];
-  const serviceWidth=service.max[0]-service.min[0];
-  const serviceDoorYOverlap=Math.min(service.max[1],get('closet-entry-door').max[1])-Math.max(service.min[1],get('closet-entry-door').min[1])>0.1;
+  const rightWardrobe=get('closet-right-full-wardrobe');
+  const aisleWidth=rightWardrobe.min[0]-integrated.max[0];
+  const headboardLower=get('master-headboard-cabinet-lower');
+  const headboardNiche=get('master-headboard-charging-niche');
+  const headboardUpper=get('master-headboard-cabinet-upper');
+  const daybed=get('master-daybed');
+  const window=get('master-window');
+  const bed=get('master-bed');
+  const headboardDimsOK=Math.abs(headboardLower.max[0]-headboardLower.min[0]-20)<0.1&&Math.abs(headboardLower.max[1]-headboardLower.min[1]-182)<0.1&&Math.abs(headboardLower.max[2]-headboardLower.min[2]-75)<0.1&&Math.abs(headboardNiche.max[2]-headboardNiche.min[2]-20)<0.1&&Math.abs(headboardUpper.max[2]-headboardUpper.min[2]-15)<0.1;
+  const headboardBedOK=bed.max[0]===headboardLower.min[0]&&headboardLower.max[1]===daybed.min[1]&&!overlap(headboardLower,daybed)&&!overlap(headboardLower,window)&&!overlap(headboardNiche,daybed)&&!overlap(headboardUpper,daybed);
   return [
     {id:'A01',title:'原圖尺寸鏈',result:chainOK?'pass':'fail',detail:'上／下 865；左／右 755 cm，四組加總一致。'},
     {id:'A02',title:'房間與門窗定位',result:'pending',detail:'主空間按尺寸鏈；未標的門窗端點及外牆厚仍需複核。'},
@@ -241,12 +254,12 @@ export function validateModel(parts:Part[],s:Settings,doorState:DoorState='close
     {id:'A14',title:'右端牆內收門盒',result:'pending',detail:'本版改為牆內收門盒示意；盒體厚度、軌道、檢修面、結構補強及木作收口須以廠商平面／剖面覆核。'},
     {id:'A15',title:'工作陽台出口不放收門堆疊',result:'pass',detail:'收門盒位於廚房／客廳隔間右端；冰箱與工作陽台側未建立門片堆疊。'},
     {id:'A16',title:'電器櫃避開牆內收門盒',result:overlap(electrical,pocket)?'fail':'pass',detail:overlap(electrical,pocket)?'整合櫃內的41 cm格柵電器櫃與牆內收門盒重疊。':'41 cm格柵電器櫃位於更衣室左側整合櫃；與短邊20 cm牆內收門盒分離，未保留額外間隔。'},
-    {id:'A17',title:'加大床與整面窗邊臥榻示意',result:'pending',detail:'床墊暫按182×188 cm；臥榻沿主臥靠窗整面牆暫按268.5×60 cm並與床架相接。床架外框、臥榻收口、窗扇開啟及實際走道待確認。'},
+    {id:'A17',title:'加大床與整面窗邊臥榻示意',result:'pending',detail:'床墊暫按182×188 cm並移至 X=657–845；臥榻沿主臥靠窗整面牆暫按268.5×60 cm，床架外框、臥榻收口、窗扇開啟及實際走道待確認。'},
     {id:'A18',title:'玄關櫃延伸至次臥',result:'pending',detail:'玄關櫃分為客廳段與次臥段，前緣與高度暫對齊；次臥門洞、牆厚、櫃深、內部分格與收口待確認。'},
     {id:'A19',title:'更衣室左側整合櫃尺寸與分配',result:cabinetDimsOK?'pass':'fail',detail:cabinetDimsOK?'整合櫃總長111 × 深60 × 高220 cm；衣櫃70 cm、格柵電器櫃41 cm，收門盒另占20 cm。':'整合櫃或分區尺寸不符合本次指定配置。'},
     {id:'A20',title:'格柵電器櫃與收門盒不碰撞',result:overlap(electrical,pocket)?'fail':'pass',detail:overlap(electrical,pocket)?'電器櫃與closet-parking-pocket重疊。':'電器櫃範圍 y=320.4–361.4；收門盒 y=431.4–451.4，兩者無幾何碰撞。'},
-    {id:'A21',title:'格柵門前方維修／散熱空間',result:serviceWidth>=60?'pending':'fail',detail:`客廳側格柵門前暫留 ${serviceWidth.toFixed(1)} cm；下方進風、上方排風及低噪音溫控扇位置已標示。${serviceDoorYOverlap?' 其 y範圍與客廳至更衣室門洞投影重疊，門扇開向與現場淨空需複核。':''}`},
-    {id:'A22',title:'更衣室中央走道（雙側60 cm櫃深假設）',result:Math.abs(aisleWidth-148.5)<0.1?'pass':'fail',detail:`268.5 − 左側60 − 右側60 = ${aisleWidth.toFixed(1)} cm；右側櫃體目前僅作60 cm深度參考占位。`},
-    {id:'A23',title:'整合櫃與客廳至更衣室入口',result:'pending',detail:'整合櫃前緣貼更衣室左側牆；客廳側維修區與既有入口門洞的門扇開向、轉身淨空及櫃體收口仍需平面／立面複核。'},
+    {id:'A22',title:'更衣室中央走道（雙側60 cm櫃深）',result:Math.abs(aisleWidth-148.5)<0.1?'pass':'fail',detail:`268.5 − 左側60 − 右側60 = ${aisleWidth.toFixed(1)} cm；右側已改為完整131 × 60 × 220 cm衣櫃。`},
+    {id:'A23',title:'整合櫃與客廳至更衣室入口',result:'pending',detail:'整合櫃前緣貼更衣室左側牆；客廳側開門、設備抽取與既有入口門洞的門扇開向、轉身淨空及櫃體收口仍需平面／立面複核。'},
+    {id:'A24',title:'床頭櫃與床／臥榻／外牆碰撞',result:headboardDimsOK&&headboardBedOK?'pass':'fail',detail:headboardDimsOK&&headboardBedOK?'床頭櫃分為下櫃、FL+75–95開放凹槽、上方15 cm收邊；與床、Y=695窗邊臥榻及主臥外窗無重疊。':'床頭櫃尺寸或碰撞關係不符合本次指定配置。'},
   ];
 }
