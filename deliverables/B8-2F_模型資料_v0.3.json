@@ -1,7 +1,8 @@
 {
+  "version": "0.3",
   "units": "cm",
   "coordinateSystem": "X 右、Y 圖上、Z 向上；一般地坪 FL0",
-  "source": "PL-01 + 規格v1.0 + 本次樓高修改",
+  "source": "PL-01 + 規格v1.0 + 樓高340cm + 更衣室整合櫃修改",
   "settings": {
     "height": 340,
     "kitchenDrop": 45,
@@ -1582,51 +1583,117 @@
       "wall": false
     },
     {
-      "id": "electrical-cabinet",
-      "name": "電器櫃（右側牆暫定）",
+      "id": "closet-integrated-cabinet",
+      "name": "更衣室左側整合櫃外框 · 111 × 60 × 220",
       "kind": "furniture",
       "room": "closet",
       "min": [
-        805,
-        326,
+        596.5,
+        320.4,
         0
       ],
       "max": [
-        865,
-        405,
+        656.5,
+        431.4,
+        220
+      ],
+      "color": "#9d8d77",
+      "status": "proposed",
+      "source": "使用者本次指定：衣櫃與格柵電器櫃共用外部櫃體；總長111、深60、高220 cm",
+      "note": "前緣與高度共用；牆內收門盒另占短邊20 cm；板材、背板、踢腳與木作收口待確認",
+      "opacity": 0.16,
+      "wall": false
+    },
+    {
+      "id": "electrical-cabinet",
+      "name": "格柵電器櫃・整合櫃客廳側開啟 · 41 × 60 × 220",
+      "kind": "furniture",
+      "room": "closet",
+      "min": [
+        596.5,
+        320.4,
+        0
+      ],
+      "max": [
+        656.5,
+        361.4,
         220
       ],
       "color": "#8f806d",
       "status": "proposed",
-      "source": "使用者需求：電器櫃整合路由器、NAS、Switch、PS5",
-      "note": "為避開更衣室左側收門袋，電器櫃暫移至右側牆；分層、散熱、插座與維修淨空待確認",
+      "source": "使用者指定：41 cm寬；朝客廳／電視牆側開啟；容納PS5、NAS、小型Switch、路由器、插座、變壓器與網路線材",
+      "note": "與衣櫃共用外部櫃體但內部完全分隔；下方進風、上方排風；18 mm板材估算淨寬37.4、淨深56.4、淨高216.4 cm，實際需扣背板、門片與五金",
+      "opacity": 0.82,
+      "wall": false
+    },
+    {
+      "id": "electrical-cabinet-grille",
+      "name": "電器櫃木質格柵門・實際進排風",
+      "kind": "furniture",
+      "room": "closet",
+      "min": [
+        596.5,
+        320.4,
+        15
+      ],
+      "max": [
+        598.5,
+        361.4,
+        205
+      ],
+      "color": "#b99a70",
+      "status": "proposed",
+      "source": "格柵門朝客廳側；下方進風、上方排風；格柵有效開孔率、門片厚度與溫控排風扇待確認",
+      "note": "不可只作裝飾；需保留設備散熱與濾塵／維修條件",
+      "wall": false
+    },
+    {
+      "id": "closet-wardrobe-module",
+      "name": "更衣室衣櫃・整合櫃更衣室側開啟 · 70 × 60 × 220",
+      "kind": "furniture",
+      "room": "closet",
+      "min": [
+        596.5,
+        361.4,
+        0
+      ],
+      "max": [
+        656.5,
+        431.4,
+        220
+      ],
+      "color": "#b8aa93",
+      "status": "proposed",
+      "source": "使用者指定：70 cm寬；門片朝更衣室側開啟；與電器櫃共用外部櫃體但內部完全分隔",
+      "note": "櫃內層板、吊掛、門片與收口待確認",
+      "opacity": 0.82,
       "wall": false
     },
     {
       "id": "electrical-cabinet-service",
-      "name": "電器櫃前方維修／散熱淨空（暫定）",
+      "name": "電器櫃客廳側維修／散熱淨空（暫定）",
       "kind": "furniture",
-      "room": "closet",
+      "room": "living",
       "min": [
-        745,
-        326,
+        536.5,
+        320.4,
         0
       ],
       "max": [
-        805,
-        405,
+        596.5,
+        361.4,
         220
       ],
       "color": "#c3ab7f",
       "status": "proposed",
-      "source": "本版電器櫃右側牆避讓配置",
-      "note": "只作動線檢查占位；不得視為已確認的櫃前淨尺寸或設備尺寸",
+      "source": "維修／散熱淨空改置格柵門正前方、客廳／電視牆側；暫按60 cm深占位",
+      "note": "只作動線與散熱檢查；不代表正式施工淨空，且需與客廳至更衣室門洞、門扇開向及現場收口複核",
       "opacity": 0.12,
       "wall": false
     },
     {
       "id": "closet-right",
-      "name": "更衣室右側一般收納櫃（避開電器櫃與牆盒）",
+      "name": "更衣室右側一般收納櫃（保留原配置）",
       "kind": "furniture",
       "room": "closet",
       "min": [
@@ -1641,27 +1708,29 @@
       ],
       "color": "#b8aa93",
       "status": "proposed",
-      "source": "與電器櫃及牆內收門盒分區；櫃體尺寸與整合方式待確認",
+      "source": "保留原模型右側一般收納占位；不再放置獨立電器櫃",
       "wall": false
     },
     {
-      "id": "closet-left",
-      "name": "更衣室左側櫃（避開牆內收門盒）",
+      "id": "closet-right-aisle-reference",
+      "name": "更衣室右側60 cm櫃深走道參考",
       "kind": "furniture",
       "room": "closet",
       "min": [
-        611.5,
-        323,
+        805,
+        320.4,
         0
       ],
       "max": [
-        647,
-        425,
+        865,
+        431.4,
         220
       ],
-      "color": "#b8aa93",
+      "color": "#c7b99f",
       "status": "proposed",
-      "source": "本版不作電器櫃；牆內收門盒位於更衣室南側；櫃體實際深度待確認",
+      "source": "只作「左右兩側皆採60 cm深」的走道驗證參考，不代表新增或定案木作櫃",
+      "note": "若右側最終採60 cm深，與左側整合櫃之間的理論中央走道為148.5 cm",
+      "opacity": 0.08,
       "wall": false
     },
     {
@@ -2132,7 +2201,7 @@
       "id": "A16",
       "title": "電器櫃避開牆內收門盒",
       "result": "pass",
-      "detail": "電器櫃暫置更衣室右側牆；與右端牆內收門盒分離，設備分層與實際維修淨空仍待確認。"
+      "detail": "41 cm格柵電器櫃位於更衣室左側整合櫃；與短邊20 cm牆內收門盒分離，未保留額外間隔。"
     },
     {
       "id": "A17",
@@ -2145,6 +2214,36 @@
       "title": "玄關櫃延伸至次臥",
       "result": "pending",
       "detail": "玄關櫃分為客廳段與次臥段，前緣與高度暫對齊；次臥門洞、牆厚、櫃深、內部分格與收口待確認。"
+    },
+    {
+      "id": "A19",
+      "title": "更衣室左側整合櫃尺寸與分配",
+      "result": "pass",
+      "detail": "整合櫃總長111 × 深60 × 高220 cm；衣櫃70 cm、格柵電器櫃41 cm，收門盒另占20 cm。"
+    },
+    {
+      "id": "A20",
+      "title": "格柵電器櫃與收門盒不碰撞",
+      "result": "pass",
+      "detail": "電器櫃範圍 y=320.4–361.4；收門盒 y=431.4–451.4，兩者無幾何碰撞。"
+    },
+    {
+      "id": "A21",
+      "title": "格柵門前方維修／散熱空間",
+      "result": "pending",
+      "detail": "客廳側格柵門前暫留 60.0 cm；下方進風、上方排風及低噪音溫控扇位置已標示。 其 y範圍與客廳至更衣室門洞投影重疊，門扇開向與現場淨空需複核。"
+    },
+    {
+      "id": "A22",
+      "title": "更衣室中央走道（雙側60 cm櫃深假設）",
+      "result": "pass",
+      "detail": "268.5 − 左側60 − 右側60 = 148.5 cm；右側櫃體目前僅作60 cm深度參考占位。"
+    },
+    {
+      "id": "A23",
+      "title": "整合櫃與客廳至更衣室入口",
+      "result": "pending",
+      "detail": "整合櫃前緣貼更衣室左側牆；客廳側維修區與既有入口門洞的門扇開向、轉身淨空及櫃體收口仍需平面／立面複核。"
     }
   ]
 }

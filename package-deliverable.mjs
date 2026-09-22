@@ -18,5 +18,5 @@ const icon=await fs.readFile(path.join(dist,'favicon.svg'),'utf8');
 html=html.replace(/href="\.\/favicon.svg"/,`href="data:image/svg+xml,${encodeURIComponent(icon)}"`);
 html=html.replace(/<script[^>]+src="[^"]+"[^>]*><\/script>/,()=>`<script type="module">${js.replaceAll('</script','<\\/script')}</script>`);
 html=html.replace(/<link[^>]+href="[^"]+\.css"[^>]*>/,()=>`<style>${css}</style>`);
-await fs.writeFile(path.join(out,'B8-2F_互動模型_v0.1.html'),html);
+await fs.writeFile(path.join(out,'B8-2F_互動模型_v0.3.html'),html);
 console.log(`Standalone HTML: ${Buffer.byteLength(html)} bytes`);

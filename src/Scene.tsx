@@ -89,7 +89,7 @@ function Contents({parts,settings,view,reset,options,selected,onSelect}:{parts:P
       {['overview','master'].includes(view)&&<><Line points={[[alignmentFaceX/100,0.04,0],[alignmentFaceX/100,0.04,-7.55]]} color="#b87732"/><TextLabel text="四段牆面共線" position={[5.875,1.6,-4.1]} width={1.6}/></>}
       {['overview','tatami'].includes(view)&&<><TextLabel text={`半牆 +${settings.halfWallTop} cm・上方開放`} position={[2.72,1.05,-2.4]} width={2}/><TextLabel text="平台 FL +45 cm" position={[0.95,0.52,-2.1]} width={1.55}/><TextLabel text="長桌・整段腿部淨空" position={[2.32,0.24,-1.6]} width={1.7}/></>}
       {view==='master'&&<TextLabel text="下方實牆・上方玻璃" position={[5.86,2.2,-6.35]} width={2.1}/>}
-      {['overview','master'].includes(view)&&<><TextLabel text="右端牆內收門盒・暫定" position={[6.35,2.15,-4.35]} width={2.1}/><TextLabel text="電器櫃・右側牆暫定" position={[8.1,2.35,-3.72]} width={2.1}/></>}
+      {['overview','master'].includes(view)&&<><TextLabel text="右端牆內收門盒・短邊20 cm暫定" position={[6.35,2.15,-4.35]} width={2.35}/><TextLabel text="左側整合櫃 111 × 60 × 220 cm" position={[6.45,2.35,-3.72]} width={2.5}/><TextLabel text="格柵門客廳側・維修淨空60 cm暫定" position={[5.25,1.55,-3.42]} width={2.8}/></>}
       {['overview','master'].includes(view)&&<TextLabel text="靠窗整面臥榻・268.5 × 60 cm 暫定" position={[7.2,0.65,-7.22]} width={2.65}/>}
       {['overview','tatami'].includes(view)&&<TextLabel text="玄關櫃整排延伸至次臥・暫定" position={[2.15,1.05,-0.32]} width={2.55}/>} 
       {view==='ceiling'&&<TextLabel text={`樓高 ${settings.height} − 預留 ${settings.kitchenDrop} = ${settings.height-settings.kitchenDrop} cm`} position={[4.35,3.55,-6.3]} width={3.4}/>}

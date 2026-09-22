@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { createModel, defaults, validateModel, alignmentFaceX, type Part } from './model.ts';
+import { createModel, defaults, validateModel, alignmentFaceX, overlap, type Part } from './model.ts';
 
 const result=(parts:Part[],id:string)=>validateModel(parts,defaults).find(c=>c.id===id)!.result;
 test('baseline: finite positive solids, reference chains, half-wall and TV constraints',()=>{
@@ -71,4 +71,19 @@ test('parked door state moves all four leaves into the dressing-room pocket',()=
     assert.ok(p.min[1]>=431.4&&p.max[1]<=451.4);
   }
   assert.equal(validateModel(parts,defaults,'parked').find(c=>c.id==='A13')!.result,'pass');
+});
+test('integrated dressing-room cabinet uses the requested 70/41/20 split',()=>{
+  const parts=createModel(defaults);
+  const integrated=parts.find(p=>p.id==='closet-integrated-cabinet')!;
+  const wardrobe=parts.find(p=>p.id==='closet-wardrobe-module')!;
+  const electrical=parts.find(p=>p.id==='electrical-cabinet')!;
+  const pocket=parts.find(p=>p.id==='closet-parking-pocket')!;
+  assert.deepEqual(integrated.min,[596.5,320.4,0]);
+  assert.deepEqual(integrated.max,[656.5,431.4,220]);
+  assert.equal(wardrobe.max[1]-wardrobe.min[1],70);
+  assert.equal(electrical.max[1]-electrical.min[1],41);
+  assert.equal(overlap(integrated,pocket),false);
+  assert.equal(validateModel(parts,defaults).find(c=>c.id==='A19')!.result,'pass');
+  assert.equal(validateModel(parts,defaults).find(c=>c.id==='A20')!.result,'pass');
+  assert.equal(validateModel(parts,defaults).find(c=>c.id==='A22')!.result,'pass');
 });
