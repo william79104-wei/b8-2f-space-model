@@ -180,7 +180,7 @@ export function createModel(s: Settings, doorState: DoorState = 'closed'): Part[
   add('bath-tub','主衛浴浴缸','fixture','mainbath',[785,171,0],[856,299,55],'#edf0eb','proposed','PL-01 浴缸位置；尺寸待確認');
   add('bath-tub-water','浴缸內部示意','fixture','mainbath',[794,182,55],[847,288,56],'#adc3be','proposed','設備外觀占位');
   add('main-wash','主衛浴面盆','fixture','mainbath',[605,262,0],[650,304,82],'#e6ece6','proposed','PL-01 設備位置；尺寸待確認');
-  add('main-wc','主衛浴馬桶','fixture','mainbath',[605,188,0],[663,235,44],'#e6ece6','proposed','PL-01 設備位置；尺寸待確認');
+  add('main-wc','主衛浴馬桶預留・標準尺寸方框 · 40 × 70 × 45','fixture','mainbath',[612,172,0],[682,212,45],'#e6ece6','proposed','使用者指定：放置於配置圖2紅框位置；先以一般標準馬桶占位表示，外尺寸暫按寬40、深70、高45 cm；實際品牌、坑距、給排水與完成面待設備及水電圖複核');
   add('bath-wash','次衛浴面盆','fixture','bath',[609,8,0],[660,58,82],'#e6ece6','proposed','PL-01 設備位置；尺寸待確認');
   add('bath-wc','次衛浴馬桶','fixture','bath',[690,8,0],[735,72,44],'#e6ece6','proposed','PL-01 設備位置；尺寸待確認');
   glass('shower-screen','次衛浴淋浴分隔','bath',[759,0,0],[761,150,210],'PL-01 淋浴位置；分隔與高度待確認');

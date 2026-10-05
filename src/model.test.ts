@@ -122,3 +122,10 @@ test('uses the selected Euro Home K635 colour on indoor wood floors',()=>{
   assert.notEqual(parts.find(p=>p.id==='floor-mainbath')!.color,selectedWoodFloorColor);
   assert.notEqual(parts.find(p=>p.id==='floor-balcony')!.color,selectedWoodFloorColor);
 });
+test('places the standard main bathroom toilet placeholder at the red-box location',()=>{
+  const parts=createModel(defaults);
+  const wc=parts.find(p=>p.id==='main-wc')!;
+  assert.deepEqual(wc.min,[612,172,0]);
+  assert.deepEqual(wc.max,[682,212,45]);
+  assert.match(wc.name,/標準尺寸/);
+});
