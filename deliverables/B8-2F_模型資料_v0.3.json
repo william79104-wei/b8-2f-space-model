@@ -15,7 +15,7 @@
   "parts": [
     {
       "id": "floor-living",
-      "name": "客廳地坪",
+      "name": "客廳木地板・Euro Home 優境 K635色調",
       "kind": "floor",
       "room": "living",
       "min": [
@@ -28,7 +28,7 @@
         451.4,
         0
       ],
-      "color": "#d5cec1",
+      "color": "#76645a",
       "status": "drawing",
       "source": "PL-01 尺寸鏈；地坪厚度 12 僅作展示，不屬施工資料",
       "wall": false
@@ -55,7 +55,7 @@
     },
     {
       "id": "floor-master",
-      "name": "主臥地坪",
+      "name": "主臥木地板・Euro Home 優境 K635色調",
       "kind": "floor",
       "room": "master",
       "min": [
@@ -68,14 +68,14 @@
         755,
         0
       ],
-      "color": "#d9d0c0",
+      "color": "#76645a",
       "status": "drawing",
       "source": "PL-01 尺寸鏈；地坪厚度 12 僅作展示，不屬施工資料",
       "wall": false
     },
     {
       "id": "floor-closet",
-      "name": "更衣室地坪",
+      "name": "更衣室木地板・Euro Home 優境 K635色調",
       "kind": "floor",
       "room": "closet",
       "min": [
@@ -88,7 +88,7 @@
         451.4,
         0
       ],
-      "color": "#d4cbbb",
+      "color": "#76645a",
       "status": "drawing",
       "source": "PL-01 尺寸鏈；地坪厚度 12 僅作展示，不屬施工資料",
       "wall": false
@@ -135,7 +135,7 @@
     },
     {
       "id": "floor-tatami",
-      "name": "次臥地坪",
+      "name": "次臥木地板・Euro Home 優境 K635色調",
       "kind": "floor",
       "room": "tatami",
       "min": [
@@ -148,7 +148,7 @@
         308,
         0
       ],
-      "color": "#d9d0c1",
+      "color": "#76645a",
       "status": "drawing",
       "source": "PL-01 尺寸鏈；地坪厚度 12 僅作展示，不屬施工資料",
       "wall": false

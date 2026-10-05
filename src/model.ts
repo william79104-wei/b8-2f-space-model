@@ -31,19 +31,23 @@ export const roomLabels = [
   { name:'更衣室',x:724,y:385}, {name:'主衛浴',x:724,y:240},
   { name:'次衛浴',x:710,y:82}, {name:'玄關',x:517,y:75},
 ];
+// User-selected Euro Home 優境 K635 reference: medium grey-brown oak tone.
+// This is a colour approximation for the interactive model; the installed
+// batch, plank direction, gloss and grain remain construction-site decisions.
+export const selectedWoodFloorColor = '#76645a';
 export function createModel(s: Settings, doorState: DoorState = 'closed'): Part[] {
   const p: Part[] = [];
   function add(id: string,name:string,kind:string,room:string,min:Vec3,max:Vec3,color:string,status:Status,source:string,note?:string,opacity?:number) {
     p.push({id,name,kind,room,min,max,color,status,source,note,opacity,wall:kind==='wall'});
   }
   const floor = (id:string,name:string,room:string,x0:number,y0:number,x1:number,y1:number,color:string) => add(id,name,'floor',room,[x0,y0,-12],[x1,y1,0],color,'drawing','PL-01 尺寸鏈；地坪厚度 12 僅作展示，不屬施工資料');
-  floor('floor-living','客廳地坪','living',275,0,587.5,451.4,'#d5cec1');
+  floor('floor-living','客廳木地板・Euro Home 優境 K635色調','living',275,0,587.5,451.4,selectedWoodFloorColor);
   floor('floor-kitchen','餐廚地坪','kitchen',275,451.4,587.5,755,'#d9d3c9');
-  floor('floor-master','主臥地坪','master',596.5,460.4,865,755,'#d9d0c0');
-  floor('floor-closet','更衣室地坪','closet',596.5,320.4,865,451.4,'#d4cbbb');
+  floor('floor-master','主臥木地板・Euro Home 優境 K635色調','master',596.5,460.4,865,755,selectedWoodFloorColor);
+  floor('floor-closet','更衣室木地板・Euro Home 優境 K635色調','closet',596.5,320.4,865,451.4,selectedWoodFloorColor);
   floor('floor-mainbath','主衛浴地坪','mainbath',598,160.4,865,310,'#b8c6c5');
   floor('floor-bath','次衛浴地坪','bath',598,0,865,150,'#bdccca');
-  floor('floor-tatami','次臥地坪','tatami',0,0,266,308,'#d9d0c1');
+  floor('floor-tatami','次臥木地板・Euro Home 優境 K635色調','tatami',0,0,266,308,selectedWoodFloorColor);
   floor('floor-balcony','工作陽台地坪','balcony',0,323,260,480.5,'#cbd0c8');
   floor('floor-terrace','露台地坪','terrace',0,480.5,260,755,'#c3ccc5');
   add('entry-floor','玄關分區','floor','living',[467.5,0,0],[577.5,145,0.4],'#e4e0d7','drawing','PL-01 玄關位置；上緣分界暫示意');

@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { createModel, defaults, validateModel, alignmentFaceX, overlap, type Part } from './model.ts';
+import { createModel, defaults, validateModel, alignmentFaceX, overlap, selectedWoodFloorColor, type Part } from './model.ts';
 
 const result=(parts:Part[],id:string)=>validateModel(parts,defaults).find(c=>c.id===id)!.result;
 test('baseline: finite positive solids, reference chains, half-wall and TV constraints',()=>{
@@ -113,4 +113,12 @@ test('moves the bed and models the open charging niche headboard',()=>{
   assert.equal(upper.max[2],110);
   assert.equal(overlap(lower,daybed),false);
   assert.equal(validateModel(parts,defaults).find(c=>c.id==='A24')!.result,'pass');
+});
+test('uses the selected Euro Home K635 colour on indoor wood floors',()=>{
+  const parts=createModel(defaults);
+  for(const id of ['floor-living','floor-master','floor-closet','floor-tatami']){
+    assert.equal(parts.find(p=>p.id===id)!.color,selectedWoodFloorColor);
+  }
+  assert.notEqual(parts.find(p=>p.id==='floor-mainbath')!.color,selectedWoodFloorColor);
+  assert.notEqual(parts.find(p=>p.id==='floor-balcony')!.color,selectedWoodFloorColor);
 });
