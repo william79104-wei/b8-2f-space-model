@@ -1898,22 +1898,42 @@
     },
     {
       "id": "main-wash",
-      "name": "主衛浴面盆",
+      "name": "主衛浴面盆・圖1紅框位置 · 60 × 45 × 82",
       "kind": "fixture",
       "room": "mainbath",
       "min": [
-        605,
-        262,
+        720,
+        170,
         0
       ],
       "max": [
-        650,
-        304,
+        780,
+        215,
         82
       ],
       "color": "#e6ece6",
       "status": "proposed",
-      "source": "PL-01 設備位置；尺寸待確認",
+      "source": "使用者指定：圖1紅框為主衛浴面盆位置；暫按60 × 45 × 82 cm占位，檯面、櫃體、排水與完成面待複核",
+      "wall": false
+    },
+    {
+      "id": "main-shower-faucet",
+      "name": "主衛浴淋浴龍頭・右上角圖例",
+      "kind": "fixture",
+      "room": "mainbath",
+      "min": [
+        775,
+        229,
+        110
+      ],
+      "max": [
+        785,
+        239,
+        122
+      ],
+      "color": "#687b72",
+      "status": "proposed",
+      "source": "使用者指定：主衛浴右上角圖示為淋浴龍頭，不是面盆；實際出水高度、混合龍頭型號與牆內配管待複核",
       "wall": false
     },
     {

@@ -129,3 +129,12 @@ test('places the standard main bathroom toilet placeholder at the red-box locati
   assert.deepEqual(wc.max,[682,212,45]);
   assert.match(wc.name,/標準尺寸/);
 });
+test('places the main bathroom basin in the red-box zone and labels the shower faucet separately',()=>{
+  const parts=createModel(defaults);
+  const basin=parts.find(p=>p.id==='main-wash')!;
+  const faucet=parts.find(p=>p.id==='main-shower-faucet')!;
+  assert.deepEqual(basin.min,[720,170,0]);
+  assert.deepEqual(basin.max,[780,215,82]);
+  assert.deepEqual(faucet.min,[775,229,110]);
+  assert.match(faucet.name,/淋浴龍頭/);
+});
