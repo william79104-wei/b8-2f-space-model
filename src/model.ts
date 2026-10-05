@@ -180,7 +180,7 @@ export function createModel(s: Settings, doorState: DoorState = 'closed'): Part[
   add('bath-tub','主衛浴浴缸','fixture','mainbath',[785,171,0],[856,299,55],'#edf0eb','proposed','PL-01 浴缸位置；尺寸待確認');
   add('bath-tub-water','浴缸內部示意','fixture','mainbath',[794,182,55],[847,288,56],'#adc3be','proposed','設備外觀占位');
   add('main-wash','主衛浴面盆・圖1紅框位置 · 60 × 45 × 82','fixture','mainbath',[720,170,0],[780,215,82],'#e6ece6','proposed','使用者指定：圖1紅框為主衛浴面盆位置；暫按60 × 45 × 82 cm占位，檯面、櫃體、排水與完成面待複核');
-  add('main-shower-faucet','主衛浴淋浴龍頭・右上角圖例','fixture','mainbath',[775,229,110],[785,239,122],'#687b72','proposed','使用者指定：主衛浴右上角圖示為淋浴龍頭，不是面盆；實際出水高度、混合龍頭型號與牆內配管待複核');
+  add('main-shower-faucet','主衛浴淋浴龍頭・右側牆面壁掛','fixture','mainbath',[862,229,110],[868,239,122],'#687b72','proposed','使用者指定：主衛浴右上角圖示為淋浴龍頭，不是面盆；改貼主衛浴右側外牆內側，穿入牆體3 cm作壁掛固定；實際出水高度、混合龍頭型號與牆內配管待複核');
   add('main-wc','主衛浴馬桶預留・標準尺寸方框 · 40 × 70 × 45','fixture','mainbath',[612,172,0],[682,212,45],'#e6ece6','proposed','使用者指定：放置於配置圖2紅框位置；先以一般標準馬桶占位表示，外尺寸暫按寬40、深70、高45 cm；實際品牌、坑距、給排水與完成面待設備及水電圖複核');
   add('bath-wash','次衛浴面盆','fixture','bath',[609,8,0],[660,58,82],'#e6ece6','proposed','PL-01 設備位置；尺寸待確認');
   add('bath-wc','次衛浴馬桶','fixture','bath',[690,8,0],[735,72,44],'#e6ece6','proposed','PL-01 設備位置；尺寸待確認');

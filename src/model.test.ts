@@ -135,6 +135,6 @@ test('places the main bathroom basin in the red-box zone and labels the shower f
   const faucet=parts.find(p=>p.id==='main-shower-faucet')!;
   assert.deepEqual(basin.min,[720,170,0]);
   assert.deepEqual(basin.max,[780,215,82]);
-  assert.deepEqual(faucet.min,[775,229,110]);
+  assert.deepEqual(faucet.min,[862,229,110]);
   assert.match(faucet.name,/淋浴龍頭/);
 });
