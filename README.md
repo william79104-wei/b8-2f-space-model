@@ -7,6 +7,7 @@
 - 最方便：開啟 `deliverables/B8-2F_互動模型_v0.3.html`。此檔已內含程式、底圖、PDF 與規格，不需下載套件；瀏覽器須支援 WebGL 2。
 - 開發專案：安裝 Node.js 24 與 pnpm 後執行 `pnpm install`、`pnpm build`、`pnpm start`，開啟 http://127.0.0.1:5173/。
 - `pnpm test` 執行幾何測試。`node export-model.mjs` 匯出 GLB／JSON；`node package-deliverable.mjs` 包裝單檔 HTML。兩個交付腳本預設輸出至專案內的 deliverables。
+- Blender 渲染：已安裝 Blender 5.2 或更新版本時，可執行 `blender --background --python blender/apply_k635_to_glb.py`，從 `deliverables/B8-2F_幾何模型_v0.3.glb` 產生全屋 K635 材質場景。場景檔為 `deliverables/B8-2F_住宅_K635_材質版.blend`，俯視預覽為 `deliverables/B8-2F_住宅_K635_全屋俯視預覽.png`；後續渲染修改以此 `.blend` 為基礎逐房間調整。
 
 ## 已實作
 
