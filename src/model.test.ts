@@ -125,9 +125,9 @@ test('uses the selected Euro Home K635 colour on indoor wood floors',()=>{
 test('places the standard main bathroom toilet placeholder at the red-box location',()=>{
   const parts=createModel(defaults);
   const wc=parts.find(p=>p.id==='main-wc')!;
-  assert.deepEqual(wc.min,[612,172,0]);
-  assert.deepEqual(wc.max,[682,212,45]);
-  assert.match(wc.name,/標準尺寸/);
+  assert.deepEqual(wc.min,[627,162,0]);
+  assert.deepEqual(wc.max,[667,232,45]);
+  assert.match(wc.name,/朝上/);
 });
 test('places the main bathroom basin in the red-box zone and labels the shower faucet separately',()=>{
   const parts=createModel(defaults);
