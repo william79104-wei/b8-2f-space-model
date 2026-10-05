@@ -15,8 +15,8 @@ def clear_scene():
         bpy.data.materials.remove(material)
 
 
-def make_k635_material():
-    mat = bpy.data.materials.new('K635 木地板・暖灰棕 PBR 近似')
+def make_k635_material(name='K635 木地板・暖灰棕 PBR 近似', tone_scale=1.0, emission_strength=0.0):
+    mat = bpy.data.materials.new(name)
     mat.use_nodes = True
     nodes = mat.node_tree.nodes
     links = mat.node_tree.links
@@ -27,6 +27,9 @@ def make_k635_material():
     bsdf.location = (390, 0)
     bsdf.inputs['Roughness'].default_value = 0.62
     bsdf.inputs['Specular IOR Level'].default_value = 0.16
+    if emission_strength and 'Emission Color' in bsdf.inputs:
+        bsdf.inputs['Emission Color'].default_value = (0.07, 0.035, 0.022, 1.0)
+        bsdf.inputs['Emission Strength'].default_value = emission_strength
     tex = nodes.new('ShaderNodeTexCoord')
     tex.location = (-760, 0)
     mapping = nodes.new('ShaderNodeMapping')
@@ -44,11 +47,11 @@ def make_k635_material():
     ramp = nodes.new('ShaderNodeValToRGB')
     ramp.location = (95, 90)
     ramp.color_ramp.elements[0].position = 0.28
-    ramp.color_ramp.elements[0].color = (0.033, 0.025, 0.021, 1.0)
+    ramp.color_ramp.elements[0].color = (0.033 * tone_scale, 0.025 * tone_scale, 0.021 * tone_scale, 1.0)
     mid = ramp.color_ramp.elements.new(0.51)
-    mid.color = (0.085, 0.062, 0.052, 1.0)
+    mid.color = (0.085 * tone_scale, 0.062 * tone_scale, 0.052 * tone_scale, 1.0)
     ramp.color_ramp.elements[1].position = 0.72
-    ramp.color_ramp.elements[1].color = (0.205, 0.15, 0.125, 1.0)
+    ramp.color_ramp.elements[1].color = (0.205 * tone_scale, 0.15 * tone_scale, 0.125 * tone_scale, 1.0)
     fine = nodes.new('ShaderNodeTexNoise')
     fine.location = (-330, -300)
     fine.inputs['Scale'].default_value = 7.0
@@ -151,26 +154,26 @@ for obj in bpy.context.scene.objects:
         obj['finish_note'] = '程序材質預覽；實際批次、木紋、光澤與施工方向待樣品確認'
 
 # Neutral architectural lighting for the first whole-home preview.
-bpy.ops.object.light_add(type='AREA', location=(2.0, -3.0, 10.5))
+bpy.ops.object.light_add(type='AREA', location=(4.3, 3.7, 25.0))
 key = bpy.context.object
 key.name = '全屋主光'
-key.data.energy = 1900
+key.data.energy = 5000
 key.data.shape = 'DISK'
-key.data.size = 6.5
-key.data.color = (1.0, 0.91, 0.82)
+key.data.size = 14.0
+key.data.color = (1.0, 0.94, 0.88)
 look_at(key, (4.3, 3.7, 0.0))
-bpy.ops.object.light_add(type='AREA', location=(10.0, 4.0, 7.0))
+bpy.ops.object.light_add(type='AREA', location=(10.0, 4.0, 20.0))
 fill = bpy.context.object
 fill.name = '全屋補光'
-fill.data.energy = 1100
+fill.data.energy = 700
 fill.data.shape = 'DISK'
 fill.data.size = 5.0
-fill.data.color = (0.82, 0.88, 1.0)
+fill.data.color = (0.86, 0.9, 1.0)
 look_at(fill, (4.3, 3.7, 0.0))
-bpy.ops.object.light_add(type='AREA', location=(4.0, 9.0, 5.0))
+bpy.ops.object.light_add(type='AREA', location=(4.0, 9.0, 20.0))
 back = bpy.context.object
 back.name = '窗側柔光'
-back.data.energy = 900
+back.data.energy = 600
 back.data.shape = 'RECTANGLE'
 back.data.size = 4.0
 back.data.size_y = 3.0
