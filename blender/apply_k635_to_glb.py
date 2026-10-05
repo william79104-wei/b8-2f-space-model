@@ -135,7 +135,7 @@ clear_scene()
 bpy.ops.import_scene.gltf(filepath=GLB)
 wood = make_k635_material()
 seam = make_seam_material()
-wood_ids = {'floor-living', 'floor-master', 'floor-closet', 'floor-tatami'}
+wood_ids = {'floor-living', 'floor-master', 'floor-closet', 'floor-tatami', 'floor-kitchen'}
 for obj in bpy.context.scene.objects:
     if obj.type == 'MESH' and obj.name in wood_ids:
         obj.data.materials.clear()
@@ -196,7 +196,7 @@ scene.render.filepath = os.path.join(OUT, 'B8-2F_住宅_K635_全屋俯視預覽.
 scene.world.color = (0.035, 0.03, 0.026)
 scene.view_settings.look = 'AgX - Medium High Contrast'
 scene['source_model'] = 'B8-2F_幾何模型_v0.3.glb'
-scene['finish_applied'] = 'floor-living, floor-master, floor-closet, floor-tatami'
+scene['finish_applied'] = 'floor-living, floor-master, floor-closet, floor-tatami, floor-kitchen'
 scene['finish_reference'] = 'Euro Home 優境 K635；使用者提供樣板與鋪設照片'
 
 bpy.ops.wm.save_as_mainfile(filepath=os.path.join(OUT, 'B8-2F_住宅_K635_材質版.blend'))
