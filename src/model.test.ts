@@ -138,3 +138,11 @@ test('places the main bathroom basin in the red-box zone and labels the shower f
   assert.deepEqual(faucet.min,[862,229,110]);
   assert.match(faucet.name,/淋浴龍頭/);
 });
+test('wall-mounts the single living-room TV to the shared bathroom wall',()=>{
+  const parts=createModel(defaults);
+  const tv=parts.find(p=>p.id==='tv')!;
+  const wall=parts.find(p=>p.id==='mainbath-west')!;
+  assert.deepEqual(tv.min,[582.5,175,70]);
+  assert.equal(tv.max[0],wall.min[0]);
+  assert.equal(validateModel(parts,defaults).find(c=>c.id==='A09')!.result,'pass');
+});

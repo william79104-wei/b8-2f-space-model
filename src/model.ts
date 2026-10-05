@@ -129,7 +129,7 @@ export function createModel(s: Settings, doorState: DoorState = 'closed'): Part[
   add('sofa-arm-a','沙發扶手','furniture','living',[291,140,28],[355,149,57],'#c9bead','proposed','沙發示意');
   add('sofa-arm-b','沙發扶手','furniture','living',[291,296,28],[355,305,57],'#c9bead','proposed','沙發示意');
   add('tv-console','原圖右側電視櫃','furniture','living',[550,157,0],[587.5,320,42],'#a79a85','proposed','PL-01 電視櫃所在側；尺寸待確認');
-  add('tv','唯一電視 · 客廳右側','tv','living',[546,175,70],[551,298,140],'#38413f','proposed','原圖右側；禁止沙發背後新增電視','尺寸為展示占位，位置關係已確認');
+  add('tv','唯一電視・客廳右側牆面壁掛','tv','living',[582.5,175,70],[587.5,298,140],'#38413f','proposed','使用者指定：電視靠主衛浴左側共用牆（mainbath-west）壁掛；禁止沙發背後新增電視','尺寸為展示占位；背板、掛架厚度與實際安裝高度待確認');
   add('kitchen-base','廚具下櫃','furniture','kitchen',[275,530,0],[336,755,85],'#c4c7bb','proposed','PL-01 61 cm 深度分段；高度及分段待確認');
   add('kitchen-counter','廚具檯面','furniture','kitchen',[275,530,85],[336,755,89],'#edebe3','proposed','檯面高度暫示意');
   add('sink','水槽位置','fixture','kitchen',[282,552,89],[325,602,91],'#899b99','proposed','PL-01 水槽位置；設備外尺寸待確認');
@@ -225,7 +225,10 @@ export function validateModel(parts:Part[],s:Settings,doorState:DoorState='close
   const legBlocks=parts.filter(p=>p.id!==desk.id&&p.kind!=='floor'&&overlap(p,legs));
   const televisions=parts.filter(p=>p.kind==='tv');
   const tvObjects=parts.filter(p=>p.kind==='tv'||/電視/.test(p.name));
-  const tvOK=televisions.length===1&&tvObjects.every(p=>p.min[0]>get('sofa-base').max[0]);
+  const tvWall=get('mainbath-west');
+  const tv= get('tv');
+  const tvWallMountOK=Math.abs(tv.max[0]-tvWall.min[0])<0.1;
+  const tvOK=televisions.length===1&&tvObjects.every(p=>p.min[0]>get('sofa-base').max[0])&&tvWallMountOK;
   const halfHeightOK=Math.abs(half.max[2]-90)<0.1&&Math.abs(half.min[2])<0.1;
   const integrated=get('closet-integrated-cabinet');
   const electrical=get('electrical-cabinet');
@@ -251,7 +254,7 @@ export function validateModel(parts:Part[],s:Settings,doorState:DoorState='close
     {id:'A06',title:'和室平台 +45',result:get('tatami-platform').max[2]===45?'pass':'fail',detail:'實體完成面 +45 cm；平台平面範圍仍為草模。'},
     {id:'A07',title:'長桌在半牆和室側',result:desk.max[0]<=half.min[0]?'pass':'fail',detail:'桌背貼半牆；次臥左側外牆沒有另加書桌。'},
     {id:'A08',title:'桌下連續腿部空間',result:legBlocks.length?'fail':'pass',detail:legBlocks.length?`干涉：${legBlocks.map(p=>p.name).join('、')}`:`連續淨空 ${s.deskLength} × ${s.deskDepth} × ${s.deskHeight-4} cm；尺寸與落腳面暫定。`},
-    {id:'A09',title:'電視只在客廳右側',result:tvOK?'pass':'fail',detail:'僅一台電視；沙發在左側，背後沒有電視／電視牆。'},
+    {id:'A09',title:'電視只在客廳右側並靠牆',result:tvOK?'pass':'fail',detail:tvOK?'僅一台電視；沙發在左側，電視已貼主衛浴左側共用牆壁掛。':'電視數量、沙發背後禁放或電視靠牆關係不符合。'},
     {id:'A10',title:'窗台與地坪基準',result:'pending',detail:`廚房／主臥 +40；次臥暫 +${s.secondarySill}。次臥量測面及窗頂待確認。`},
     {id:'A11',title:'工作陽台至露台無門檻',result:'pending',detail:'模型交界無新增檻、暫採連續地坪；現場標高、坡度未確認。'},
     {id:'A12',title:'樓高與廚房降板',result:'pending',detail:`樓高 ${s.height} 已提供；預留 ${s.kitchenDrop}，淨高暫 ${s.height-s.kitchenDrop}。樓板／設備尺寸仍需核對。`},
