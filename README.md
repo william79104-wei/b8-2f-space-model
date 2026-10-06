@@ -10,6 +10,7 @@
 - Blender 渲染：已安裝 Blender 5.2 或更新版本時，可執行 `blender --background --python blender/apply_k635_to_glb.py`，從 `deliverables/B8-2F_幾何模型_v0.3.glb` 產生全屋 K635 材質場景。場景檔為 `deliverables/B8-2F_住宅_K635_材質版.blend`，俯視預覽為 `deliverables/B8-2F_住宅_K635_全屋俯視預覽.png`；後續渲染修改以此 `.blend` 為基礎逐房間調整。
 - 完整實體渲染：同一腳本會把建商照片對應的廚具、衛浴陶瓷與五金、主臥床／臥榻、次臥暖木配色與客廳沙發加入 Blender 場景，輸出 `deliverables/B8-2F_住宅_完整實體版.blend` 與 `deliverables/B8-2F_住宅_完整實體渲染.png`。參考與暫定尺寸記錄在 `deliverables/B8-2F_實體渲染參考_v0.1.md`。
 - 客廳高品質樣板：`blender/render_living_room_hero.py` 以完整實體版為基礎建立客廳透視視角，補上有靠墊／扶手／椅腳的沙發、布料凹凸、抱枕、地毯、茶几與暖木電視櫃，輸出 `deliverables/B8-2F_客廳_高品質渲染_v0.1.blend` 與 `deliverables/B8-2F_客廳_高品質渲染_v0.1.png`。這是逐房間修正的第一版樣板，家具造型、配色與鏡位仍可依實際照片逐項調整。
+- 客廳高模家具樣板：目前另輸出 `deliverables/B8-2F_客廳_高品質渲染_v0.4.blend` 與 `deliverables/B8-2F_客廳_高品質渲染_v0.4.png`，以帶 UV 與細節網格的現代布沙發取代程序方盒沙發，並使用 Cycles、景深與室內柔光。高模來源與尺度仍需依實際選購沙發複核，暫作視覺樣板。
 
 ## 已實作
 
