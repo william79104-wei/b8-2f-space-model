@@ -1,11 +1,9 @@
 import bpy
 import os
-import math
 from mathutils import Vector
 
 ROOT = r'C:\Users\USER\Documents\Codex\2026-09-14\referenced-chatgpt-conversation-this-is-an\work\b8-model'
 OUT = r'C:\Users\USER\Documents\Codex\2026-09-14\referenced-chatgpt-conversation-this-is-an\outputs'
-SOFA_ASSET = r'C:\Users\USER\Documents\Codex\2026-09-14\referenced-chatgpt-conversation-this-is-an\work\b8-model\assets\living\modern-fabric-sofa.glb'
 os.makedirs(OUT, exist_ok=True)
 
 
@@ -36,39 +34,12 @@ def fabric_mat(name, base):
     links = m.node_tree.links
     bsdf = next((n for n in nodes if n.bl_idname == 'ShaderNodeBsdfPrincipled'), None)
     tex = nodes.new('ShaderNodeTexNoise')
-    tex.inputs['Scale'].default_value = 24.0
-    tex.inputs['Detail'].default_value = 4.5
-    tex.inputs['Roughness'].default_value = 0.72
-    ramp = nodes.new('ShaderNodeValToRGB')
-    ramp.color_ramp.elements[0].color = tuple(max(0.0, c * 0.62) for c in base) + (1.0,)
-    ramp.color_ramp.elements[1].color = tuple(min(1.0, c * 1.22) for c in base) + (1.0,)
-    links.new(tex.outputs['Fac'], ramp.inputs['Fac'])
-    links.new(ramp.outputs['Color'], bsdf.inputs['Base Color'])
-    bump = nodes.new('ShaderNodeBump')
-    bump.inputs['Strength'].default_value = 0.11
-    bump.inputs['Distance'].default_value = 0.008
-    links.new(tex.outputs['Fac'], bump.inputs['Height'])
-    links.new(bump.outputs['Normal'], bsdf.inputs['Normal'])
-    return m
-
-
-def wood_mat(name, base):
-    m = mat(name, base, roughness=0.42)
-    nodes = m.node_tree.nodes
-    links = m.node_tree.links
-    bsdf = next((n for n in nodes if n.bl_idname == 'ShaderNodeBsdfPrincipled'), None)
-    tex = nodes.new('ShaderNodeTexNoise')
-    tex.inputs['Scale'].default_value = 5.5
-    tex.inputs['Detail'].default_value = 3.0
-    tex.inputs['Roughness'].default_value = 0.58
-    ramp = nodes.new('ShaderNodeValToRGB')
-    ramp.color_ramp.elements[0].color = tuple(max(0.0, c * 0.50) for c in base) + (1.0,)
-    ramp.color_ramp.elements[1].color = tuple(min(1.0, c * 1.32) for c in base) + (1.0,)
-    links.new(tex.outputs['Fac'], ramp.inputs['Fac'])
-    links.new(ramp.outputs['Color'], bsdf.inputs['Base Color'])
+    tex.inputs['Scale'].default_value = 38.0
+    tex.inputs['Detail'].default_value = 2.0
+    tex.inputs['Roughness'].default_value = 0.75
     bump = nodes.new('ShaderNodeBump')
     bump.inputs['Strength'].default_value = 0.16
-    bump.inputs['Distance'].default_value = 0.018
+    bump.inputs['Distance'].default_value = 0.025
     links.new(tex.outputs['Fac'], bump.inputs['Height'])
     links.new(bump.outputs['Normal'], bsdf.inputs['Normal'])
     return m
@@ -83,9 +54,7 @@ def rounded_cube(name, loc, dims, material, bevel=0.05):
     if bevel:
         b = o.modifiers.new('家具圓角', 'BEVEL')
         b.width = min(bevel, min(dims) / 3)
-        b.segments = 12
-    for poly in o.data.polygons:
-        poly.use_smooth = True
+        b.segments = 6
     o.data.materials.append(material)
     return o
 
@@ -128,63 +97,29 @@ def add_sofa(fabric, light_fabric, wood, accent):
                  'sofa-real-arm-a', 'sofa-real-arm-b'):
         hide(name)
     # Confirmed left placement, facing the TV wall on the right (+X).
-    rounded_cube('hero-sofa-base', (3.16, 2.225, 0.18), (0.78, 1.65, 0.30), wood, 0.045)
-    rounded_cube('hero-sofa-back-shell', (2.84, 2.225, 0.64), (0.15, 1.65, 0.70), fabric, 0.055)
-    rounded_cube('hero-sofa-seat-left', (3.20, 1.82, 0.42), (0.61, 0.70, 0.20), light_fabric, 0.055)
-    rounded_cube('hero-sofa-seat-right', (3.20, 2.63, 0.42), (0.61, 0.70, 0.20), light_fabric, 0.055)
-    rounded_cube('hero-sofa-arm-left', (3.20, 1.42, 0.60), (0.65, 0.13, 0.48), fabric, 0.045)
-    rounded_cube('hero-sofa-arm-right', (3.20, 3.03, 0.60), (0.65, 0.13, 0.48), fabric, 0.045)
+    rounded_cube('hero-sofa-base', (3.16, 2.225, 0.18), (0.78, 1.65, 0.30), wood, 0.08)
+    rounded_cube('hero-sofa-back-shell', (2.84, 2.225, 0.64), (0.15, 1.65, 0.70), fabric, 0.10)
+    rounded_cube('hero-sofa-seat-left', (3.20, 1.82, 0.42), (0.61, 0.70, 0.20), light_fabric, 0.10)
+    rounded_cube('hero-sofa-seat-right', (3.20, 2.63, 0.42), (0.61, 0.70, 0.20), light_fabric, 0.10)
+    rounded_cube('hero-sofa-arm-left', (3.20, 1.42, 0.60), (0.65, 0.13, 0.48), fabric, 0.08)
+    rounded_cube('hero-sofa-arm-right', (3.20, 3.03, 0.60), (0.65, 0.13, 0.48), fabric, 0.08)
     # Back cushions with a slight lean and soft top roll.
-    rounded_cube('hero-sofa-back-cushion-left', (2.98, 1.82, 0.78), (0.16, 0.67, 0.48), light_fabric, 0.055)
-    rounded_cube('hero-sofa-back-cushion-right', (2.98, 2.63, 0.78), (0.16, 0.67, 0.48), light_fabric, 0.055)
-    # Fine piping and seams keep the upholstery from reading as one-piece boxes.
-    piping = mat('客廳沙發縫線包邊', (0.12, 0.085, 0.060), 0.88)
-    for yy in (1.82, 2.63):
-        rounded_cube('hero-sofa-seat-piping', (3.515, yy, 0.515), (0.016, 0.62, 0.022), piping, 0.009)
-        rounded_cube('hero-sofa-seat-side-seam', (3.20, yy - 0.345, 0.515), (0.48, 0.016, 0.022), piping, 0.009)
-    for yy in (1.82, 2.63):
-        rounded_cube('hero-sofa-back-piping', (3.075, yy, 0.98), (0.015, 0.59, 0.018), piping, 0.007)
+    rounded_cube('hero-sofa-back-cushion-left', (2.98, 1.82, 0.78), (0.16, 0.67, 0.48), light_fabric, 0.10)
+    rounded_cube('hero-sofa-back-cushion-right', (2.98, 2.63, 0.78), (0.16, 0.67, 0.48), light_fabric, 0.10)
     # Two contrasting throw pillows add scale and material variation.
-    p1 = rounded_cube('hero-sofa-pillow-terracotta', (3.05, 1.58, 0.88), (0.25, 0.16, 0.32), accent, 0.07)
-    p1.rotation_euler.z = -0.12
-    p2 = rounded_cube('hero-sofa-pillow-olive', (3.05, 2.86, 0.88), (0.24, 0.16, 0.30), mat('客廳橄欖綠抱枕', (0.16, 0.20, 0.12), 0.9), 0.07)
-    p2.rotation_euler.z = 0.12
+    uv_sphere('hero-sofa-pillow-terracotta', (3.05, 1.58, 0.88), (0.18, 0.08, 0.16), accent, rotation=(0, 0, -0.12))
+    uv_sphere('hero-sofa-pillow-olive', (3.05, 2.86, 0.88), (0.17, 0.08, 0.15), mat('客廳橄欖綠抱枕', (0.16, 0.20, 0.12), 0.9), rotation=(0, 0, 0.12))
     for xx in (2.88, 3.44):
         for yy in (1.55, 2.90):
             rounded_cube('hero-sofa-leg', (xx, yy, 0.06), (0.045, 0.045, 0.12), wood, 0.012)
 
 
 def add_coffee_table(wood, metal):
-    rug = fabric_mat('客廳暖灰地毯', (0.22, 0.18, 0.13))
-    rounded_cube('hero-living-rug', (4.25, 2.23, 0.022), (1.55, 1.75, 0.025), rug, 0.018)
-    rounded_cube('hero-coffee-table-top', (4.25, 2.23, 0.43), (0.92, 0.54, 0.07), wood, 0.045)
+    rug = mat('客廳暖灰地毯', (0.22, 0.18, 0.13), 0.92)
+    rounded_cube('hero-living-rug', (4.25, 2.23, 0.022), (1.55, 1.75, 0.025), rug, 0.035)
+    rounded_cube('hero-coffee-table-top', (4.25, 2.23, 0.43), (0.92, 0.54, 0.07), wood, 0.08)
     cylinder('hero-coffee-table-leg-center', (4.25, 2.23, 0.20), 0.12, 0.36, metal, vertices=48)
     cylinder('hero-coffee-table-foot', (4.25, 2.23, 0.045), 0.25, 0.035, metal, vertices=48)
-
-
-def add_real_sofa_asset():
-    # Use a UV-mapped high-detail sofa asset for the quality pass; keep the
-    # procedural sofa hidden as a fallback reference in the scene.
-    for o in bpy.data.objects:
-        if o.name.startswith('hero-sofa-') or o.name.startswith('sofa-real-'):
-            o.hide_render = True
-            o.hide_viewport = True
-    if not os.path.exists(SOFA_ASSET):
-        return None
-    bpy.ops.import_scene.gltf(filepath=SOFA_ASSET)
-    imported = [o for o in bpy.context.selected_objects if o.type == 'MESH']
-    if not imported:
-        return None
-    sofa = imported[0]
-    sofa.name = 'hero-real-sofa-uv-high-detail'
-    # The asset's front faces -Y; rotate it so the seating faces the TV wall.
-    sofa.rotation_euler.z = math.radians(90)
-    # Mirror depth so the upholstered seating faces the camera/TV side.
-    sofa.scale = (-1.65, 1.65, 2.20)
-    sofa.location = (3.16, 2.225, 0.365)
-    sofa['source'] = 'FurniMesh contemporary three-seater sofa GLB'
-    sofa['placement_note'] = '高模替換客廳程序沙發；尺寸需按實體沙發型號複核'
-    return sofa
 
 
 def add_tv_wall(wood, console):
@@ -207,26 +142,22 @@ def add_tv_wall(wood, console):
 def main():
     fabric = fabric_mat('客廳沙發深暖灰布料', (0.20, 0.14, 0.095))
     light_fabric = fabric_mat('客廳沙發坐墊米灰布料', (0.36, 0.29, 0.22))
-    wood = wood_mat('客廳暖胡桃木家具', (0.18, 0.095, 0.045))
+    wood = mat('客廳暖胡桃木家具', (0.18, 0.095, 0.045), 0.46)
     console = mat('電視櫃深灰棕木皮', (0.07, 0.045, 0.028), 0.50)
     metal = mat('茶几黑鐵腳', (0.025, 0.027, 0.025), 0.28, 0.75)
     accent = mat('客廳磚紅抱枕', (0.34, 0.12, 0.055), 0.88)
     add_sofa(fabric, light_fabric, wood, accent)
-    add_real_sofa_asset()
     add_coffee_table(wood, metal)
     add_tv_wall(wood, console)
 
     # Hero camera: inside the living room, looking diagonally toward the TV wall.
-    bpy.ops.object.camera_add(location=(5.85, 0.85, 1.82))
+    bpy.ops.object.camera_add(location=(5.85, 4.65, 1.82))
     cam = bpy.context.object
     cam.name = '客廳室內透視樣板鏡頭'
     cam.data.type = 'PERSP'
     cam.data.lens = 35
     cam.data.sensor_width = 36
     look_at(cam, (3.25, 2.22, 0.72))
-    cam.data.dof.use_dof = True
-    cam.data.dof.focus_object = bpy.data.objects.get('hero-sofa-seat-left')
-    cam.data.dof.aperture_fstop = 5.6
     bpy.context.scene.camera = cam
 
     # Room-scale soft lighting for a warmer interior-design presentation.
@@ -259,27 +190,18 @@ def main():
     look_at(top, (4.4, 2.2, 0.0))
 
     scene = bpy.context.scene
-    scene.render.engine = 'CYCLES'
-    scene.cycles.samples = 32
-    scene.cycles.use_denoising = True
-    scene.render.image_settings.color_mode = 'RGBA'
+    scene.render.engine = 'BLENDER_EEVEE'
     scene.render.resolution_x = 1280
     scene.render.resolution_y = 900
     scene.render.resolution_percentage = 100
     scene.render.image_settings.file_format = 'PNG'
-    scene.render.filepath = os.path.join(OUT, 'B8-2F_客廳_高品質渲染_v0.4.png')
+    scene.render.filepath = os.path.join(OUT, 'B8-2F_客廳_高品質渲染_v0.1.png')
     scene.world.color = (0.025, 0.020, 0.016)
-    scene.world.use_nodes = True
-    bg = next((n for n in scene.world.node_tree.nodes if n.bl_idname == 'ShaderNodeBackground'), None)
-    if bg:
-        bg.inputs['Color'].default_value = (0.055, 0.045, 0.035, 1.0)
-        bg.inputs['Strength'].default_value = 0.24
     scene.view_settings.look = 'AgX - Medium High Contrast'
     scene.view_settings.exposure = -0.45
     scene['hero_view'] = 'living-room perspective sample'
-    scene['hero_note'] = '第四版客廳樣板；以UV貼圖高模沙發取代程序方盒沙發，搭配Cycles光影與景深'
-    bpy.ops.file.pack_all()
-    bpy.ops.wm.save_as_mainfile(filepath=os.path.join(OUT, 'B8-2F_客廳_高品質渲染_v0.4.blend'))
+    scene['hero_note'] = '第一版高品質客廳樣板；家具曲面、布料與暖木配色供逐項確認'
+    bpy.ops.wm.save_as_mainfile(filepath=os.path.join(OUT, 'B8-2F_客廳_高品質渲染_v0.1.blend'))
     bpy.ops.render.render(write_still=True)
 
 
