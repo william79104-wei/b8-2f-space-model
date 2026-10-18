@@ -11,8 +11,8 @@
   <script>
   (async()=>{
     const parts=[];
-    for(let i=0;i<4;i++){
-      const r=await fetch("./model-"+String(i).padStart(2,"0")+".txt",{cache:"no-store"});
+    for(let i=0;i<9;i++){
+      const r=await fetch("./latest-model-"+String(i).padStart(2,"0")+".txt",{cache:"no-store"});
       if(!r.ok) throw new Error("模型分段載入失敗 "+(i+1));
       parts.push(await r.text());
     }
